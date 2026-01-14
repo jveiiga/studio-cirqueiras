@@ -156,14 +156,14 @@ export default function Home() {
                 />
                 <div className="flex gap-3 mt-5">
                   <Image
-                    className="w-full sm:w-full md:w-[220px] lg:w-[218px] xl:w-[235px] rounded-lg"
+                    className="w-[49%] sm:w-full md:w-[220px] lg:w-[218px] xl:w-[235px] rounded-lg"
                     src="/images/raquel.jpg"
                     alt="Imagem procedimentos"
                     width={200}
                     height={300}
                   />
                   <Image
-                    className="w-full sm:w-full md:w-[220px] lg:w-[218px] xl:w-[235px] rounded-lg"
+                    className="w-[49%] sm:w-full md:w-[220px] lg:w-[218px] xl:w-[235px] rounded-lg"
                     src="/images/mariana.jpg"
                     alt="Imagem procedimentos"
                     width={200}
