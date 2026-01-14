@@ -45,7 +45,7 @@ export default function Home() {
               <button className="relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group">
                 <span className="absolute inset-0 bg-[#4c2a12]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
                 <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
-                <span className="text-sm relative z-10 transition-all duration-300 group-hover:tracking-widest">
+                <span className="text-sm relative text-sm z-10 transition-all duration-300 group-hover:tracking-widest">
                   Saiba mais
                 </span>
               </button>
@@ -212,7 +212,7 @@ export default function Home() {
             transition={{ duration: 4, ease: "easeOut" }}
             viewport={{ once: true }} >
             <motion.p
-              className="mb-10 lg:mb-15 lg:mt-40 ml-auto mr-[5%] uppercase text-gray-500 w-fit"
+              className="my-10 lg:mb-15 lg:mt-40 ml-auto mr-[5%] uppercase text-gray-500 w-fit"
               initial={{ x: 80, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
@@ -233,14 +233,14 @@ export default function Home() {
 
             <div className="flex-col flex justify-center items-center gap-10 mx-5 mb-30 sm:flex-col md:flex-row lg:flex-row ">
 
-              <div className="h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
-                <div className="relative w-full h-[200px] md:h-[150px]">
+              <div className="h-[300px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
+                <div className="relative w-full h-[150px] md:h-[150px]">
                   <Image src="/images/sobrancelha.png" alt="Postagem do blog explicando tudo que você precisa saber sobre design de sobrancelhas" fill className="object-cover" />
                 </div>
-                <p className="md:text-md text-xl pt-5 px-5">Design de Sobrancelhas: tudo o que você precisa saber</p>
+                <p className="text-sm md:text-md xl:text-xl pt-5 px-5">Design de Sobrancelhas: tudo o que você precisa saber</p>
                 <button
                   type="button"
-                  className="mt-10 mb-8 ml-5 relative overflow-hidden w-[150px] h-[40px] md:mt-5 md:w-[130px]
+                  className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130] h-[40] lg:w-[150px] lg:h-[40px] md:mt-5 md:w-[130px]
                           text-md text-black border-2 border-[#333]
                           transition-all duration-300
                           after:content-[''] after:absolute after:top-0 after:left-0
@@ -249,7 +249,7 @@ export default function Home() {
                           hover:text-white hover:border-white hover:after:w-full
                           group cursor-pointer"
                 >
-                  <span className="relative z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
+                  <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
                     Ler Sobre
                     <Image
                       src="/images/seta-direita-preta.png"
@@ -262,14 +262,14 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
-                <div className=" md:h-[150px] relative w-full h-[200px]">
+              <div className="h-[300px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
+                <div className=" md:h-[150px] relative w-full h-[150px]">
                   <Image src="/images/micro.png" alt="Design com Henna" fill className="object-cover" />
                 </div>
-                <p className="md:text-md text-xl pt-5 px-5">10 hábitos essenciais para prolongar a micropigmentação</p>
+                <p className="text-sm md:text-md xl:text-xl pt-5 px-5">10 hábitos essenciais para prolongar a micropigmentação</p>
                 <button
                   type="button"
-                  className="mt-10 mb-8 ml-5 relative overflow-hidden w-[150px] h-[40px] md:mt-5 md:w-[130px]
+                  className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130] h-[40] lg:w-[150px] lg:h-[40px] md:mt-5 md:w-[130px]
                           text-md text-black border-2 border-[#333]
                           transition-all duration-300
                           after:content-[''] after:absolute after:top-0 after:left-0
@@ -278,7 +278,7 @@ export default function Home() {
                           hover:text-white hover:border-white hover:after:w-full
                           group cursor-pointer"
                 >
-                  <span className="relative z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
+                  <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
                     Ler Sobre
                     <Image
                       src="/images/seta-direita-preta.png"
@@ -291,14 +291,14 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
-                <div className="relative w-full h-[200px] md:h-[150px]">
+              <div className="h-[300px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
+                <div className="relative w-full h-[150px] md:h-[150px]">
                   <Image src="/images/nail.png" alt="Design com Henna" fill className="object-cover" />
                 </div>
-                <p className="md:text-md text-xl pt-5 px-5">Quais cuidados especiais suas unhas devem ter?</p>
+                <p className="text-sm md:text-md xl:text-xl pt-5 px-5">Quais cuidados especiais suas unhas devem ter?</p>
                 <button
                   type="button"
-                  className="mt-10 mb-8 ml-5 relative overflow-hidden w-[150px] h-[40px] md:mt-5 md:w-[130px]
+                  className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130] h-[40] lg:w-[150px] lg:h-[40px] md:mt-5 md:w-[130px]
                           text-md text-black border-2 border-[#333]
                           transition-all duration-300
                           after:content-[''] after:absolute after:top-0 after:left-0
@@ -307,7 +307,7 @@ export default function Home() {
                           hover:text-white hover:border-white hover:after:w-full
                           group cursor-pointer"
                 >
-                  <span className="relative z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
+                  <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
                     Ler Sobre
                     <Image
                       src="/images/seta-direita-preta.png"
