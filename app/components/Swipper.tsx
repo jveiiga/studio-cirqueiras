@@ -33,7 +33,7 @@ export default function CardSlider() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <div className="relative mx-5 h-[800px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
+          <div className="relative mx-5 h-[600px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
             <Image src="/images/brow-lamination.jpg" alt="Brow Lamination" fill className="object-cover" />
             <div className="absolute inset-0 flex items-end px-6 py-10 bg-gradient-to-t from-[#4c2a12]/60">
               <p className="text-white text-4xl uppercase tracking-wide">Brow Lamination</p>
@@ -41,7 +41,7 @@ export default function CardSlider() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <div className="relative mx-5 h-[800px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
+          <div className="relative mx-5 h-[600px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
             <Image src="/images/design-com-henna.jpg" alt="Design com Henna" fill className="object-cover" />
             <div className="absolute inset-0 flex items-end px-6 py-10 bg-gradient-to-t from-[#4c2a12]/60">
               <p className="text-white text-4xl uppercase tracking-wide">Design com Henna</p>
@@ -49,7 +49,7 @@ export default function CardSlider() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <div className="relative mx-5 h-[800px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
+          <div className="relative mx-5 h-[600px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
             <Image src="/images/fox-eyes.jpg" alt="Fox Eyes" fill className="object-cover" />
             <div className="absolute inset-0 flex items-end px-6 py-10 bg-gradient-to-t from-[#4c2a12]/60">
               <p className="text-white text-4xl uppercase tracking-wide">Fox Eyes</p>
@@ -57,7 +57,7 @@ export default function CardSlider() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <div className="relative mx-5 h-[800px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
+          <div className="relative mx-5 h-[600px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
             <Image src="/images/lash-lifiting.jpg" alt="Lash Lifiting" fill className="object-cover" />
             <div className="absolute inset-0 flex items-end px-6 py-10 bg-gradient-to-t from-[#4c2a12]/60">
               <p className="text-white text-4xl uppercase tracking-wide">Lash Lifiting</p>
@@ -65,7 +65,7 @@ export default function CardSlider() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <div className="relative mx-5 h-[800px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
+          <div className="relative mx-5 h-[600px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
             <Image src="/images/mega-fox-1.jpg" alt="Mega Fox" fill className="object-cover" />
             <div className="absolute inset-0 flex items-end px-6 py-10 bg-gradient-to-t from-[#4c2a12]/60">
               <p className="text-white text-4xl uppercase tracking-wide">Mega Fox</p>
@@ -73,7 +73,7 @@ export default function CardSlider() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <div className="relative mx-5 h-[800px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
+          <div className="relative mx-5 h-[600px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
             <Image src="/images/nail-art.jpg" alt="Nail Art" fill className="object-cover" />
             <div className="absolute inset-0 flex items-end px-6 py-10 bg-gradient-to-t from-[#4c2a12]/60">
               <p className="text-white text-4xl uppercase tracking-wide">Nail Art</p>
@@ -81,7 +81,7 @@ export default function CardSlider() {
           </div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <div className="relative mx-5 h-[800px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
+          <div className="relative mx-5 h-[600px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full h-[562px] rounded-2xl overflow-hidden">
             <Image src="/images/banho-de-gel.jpg" alt="Banho de Gel" fill className="object-cover" />
             <div className="absolute inset-0 flex items-end px-6 py-10 bg-gradient-to-t from-[#4c2a12]/60">
               <p className="text-white text-4xl uppercase tracking-wide">Banho de Gel</p>

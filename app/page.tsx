@@ -42,7 +42,7 @@ export default function Home() {
                 Questionamos padrões e valorizamos o que é real, entregando resultados que vão além do esperado.
               </p>
 
-              <button className="relative overflow-hidden uppercase cursor-pointer w-[100px] h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group">
+              <button className="relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group">
                 <span className="absolute inset-0 bg-[#4c2a12]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
                 <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
                 <span className="text-sm relative z-10 transition-all duration-300 group-hover:tracking-widest">
@@ -51,26 +51,25 @@ export default function Home() {
               </button>
             </div>
           </motion.div>
-
         </section>
 
-        <section className="mb-20">
+        <section className="mb-10">
           <motion.p
-            className="my-15 ml-[5%] uppercase text-gray-500"
+            className="text-sm my-10 ml-[5%] uppercase text-gray-500"
             initial={{ x: -80, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
             viewport={{ once: true }}
           >Conheça melhor nossos serviços</motion.p>
           <motion.hr
-            className="w-[90%] mx-auto border-t-1 border-gray-500 mb-15"
+            className="w-[90%] mx-auto border-t-1 border-gray-500 mb-10"
             initial={{ x: 80, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
           />
           <div className="flex-col mx-[5%] sm:flex-col sm:items-start sm:mx-10 md:items-center lg:justify-around lg:items-center xl:justify-around xl:items-center flex">
-            <h1 className="text-2xl sm:text-4xl md:text-5xl xl:text-6xl text-black mb-15">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl xl:text-6xl text-black mb-10">
               <span>Conheça o </span>
               <span className="text-[#c9964d]">Studio Cirqueira's</span>
             </h1>
@@ -80,8 +79,7 @@ export default function Home() {
           <div className="flex items-stretch justify-center rounded-3xl">
             <div className="flex-col-reverse sm:flex-col-reverse sm:text-md md:flex-row lg:flex-row xl:flex-row flex mx-5 overflow-hidden rounded-3xl">
 
-              <div className="relative w-full h-[500px] md:w-[500px] md:h-[500px] lg:w-[300px] lg:h-[500px] xl:w-[500px] xl:h-[500px]">
-
+              <div className="relative w-full h-[300px] md:w-[500px] md:h-[500px] lg:w-[300px] lg:h-[500px] xl:w-[500px] xl:h-[500px]">
                 <Image
                   src="/images/std-cirqueiras.png"
                   alt="Imagem meninas"
@@ -91,8 +89,9 @@ export default function Home() {
               </div>
 
               <div className="bg-[#c9964d] flex flex-col justify-center items-start p-6">
-                <p className="mt-20 text-1xl sm:text-2xl sm:mt-30 md:text-3xl lg:max-w-[500px] text-3xl max-w-xl mx-auto my-6">Valorizar o que é natural é uma escolha que reflete equilíbrio, autenticidade e bem-estar.</p>
-                <p className="text-md mb-6">Conheça nosso local de atendimento.</p>
+
+                <p className="text-sm font-bold font-poppins sm:text-2xl sm:mt-30 md:text-3xl lg:max-w-[500px] text-3xl max-w-xl mx-auto my-6">Valorizar o que é natural é uma escolha que reflete equilíbrio, autenticidade e bem-estar.</p>
+                <p className="text-sm mb-6">Conheça nosso local de atendimento.</p>
                 <a
                   href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
                   target="_blank"
@@ -109,7 +108,7 @@ export default function Home() {
 
         <section>
           <motion.p
-            className="my-15 ml-auto mr-[5%] uppercase text-gray-500 w-fit"
+            className="text-sm my-10 ml-auto mr-[5%] uppercase text-gray-500 w-fit"
             initial={{ x: 80, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -128,19 +127,19 @@ export default function Home() {
             <div className="flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row flex">
               <div className="mr-[10%]">
                 <Image
-                  className="sm:my-15 my-20"
+                  className="sm:my-15 my-5"
                   src="/images/insta.png"
                   alt="Imagem procedimentos"
                   width={210}
                   height={200}
                 />
                 <div className="">
-                  <p className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl lg:w-[500px] xl:w-[600px] xl:max-w-xl xl:text-7xl">
+                  <p className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl lg:w-[500px] xl:w-[600px] xl:max-w-xl xl:text-7xl">
                     <span className="font-poppins mt-5 text-[#bc743a]">Onde </span>
                     <span className="font-poppins mt-5 text-[#4c2a12]">nasce o</span>
                   </p>
-                  <h2 className=" mt-5 text-4xl sm:text-4xl md:text-4xl lg:text-5xl lg:w-full xl:text-6xl font-poppins">Studio Cirqueira's</h2>
-                  <p className="mt-10 sm:mt-10 md:text-md md:max-w-[400px] lg:text-lg lg:max-w-[400px] lg:mt-15 xl:text-lg xl:mt-25 leading-loose">O studio nasceu da vontade de impactar pessoas de forma real, defendendo a liberdade de ser quem se é e valorizando a beleza sem imposições.</p>
+                  <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl lg:w-full xl:text-6xl font-poppins">Studio Cirqueira's</h2>
+                  <p className="mt-5 text-sm sm:mt-10 md:text-md md:max-w-[400px] lg:text-lg lg:max-w-[400px] lg:mt-15 xl:text-lg xl:mt-25 lg:leading-loose">O studio nasceu da vontade de impactar pessoas de forma real, defendendo a liberdade de ser quem se é e valorizando a beleza sem imposições.</p>
                   <button className="my-10 sm:my-10 md:mb-10 md:mt-20 relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] leading-[50px] text-black text-sm transition-all duration-300 group">
                     <span className="absolute inset-0 bg-[#4c2a12]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
                     <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
@@ -182,7 +181,7 @@ export default function Home() {
 
         <section>
           <motion.p
-            className="my-15 ml-[5%] uppercase text-gray-500"
+            className="my-10 text-sm ml-[5%] uppercase text-gray-500"
             initial={{ x: -80, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
@@ -190,14 +189,14 @@ export default function Home() {
           >Conheça nossos procedimentos
           </motion.p>
           <motion.hr
-            className="w-[90%] mx-auto border-t-1 border-gray-500 mb-15"
+            className="w-[90%] mx-auto border-t-1 border-gray-500 mb-10"
             initial={{ x: 80, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
           />
           <div>
-            <h3 className="mb-15 ml-[5%] relative inline-block px-6 py-3 text-2xl font-semibold text-black bg-gradient-to-r from-[#f6efe9] via-[#efe2d6] to-[#f6efe9] animate-[pulse_3s_ease-in-out_infinite] after:content-[''] after:absolute after:left-1/2 after:-bottom-1 after:h-[3px] after:w-2/3 after:-translate-x-1/2 after:bg-[#4c2a12] after:animate-[bounce_3s_ease-in-out_infinite]">
+            <h3 className="mb-10 ml-[5%] relative inline-block px-6 py-3 text-2xl font-semibold text-black bg-gradient-to-r from-[#f6efe9] via-[#efe2d6] to-[#f6efe9] animate-[pulse_3s_ease-in-out_infinite] after:content-[''] after:absolute after:left-1/2 after:-bottom-1 after:h-[3px] after:w-2/3 after:-translate-x-1/2 after:bg-[#4c2a12] after:animate-[bounce_3s_ease-in-out_infinite]">
               Métodos
             </h3>
             <div>
@@ -211,10 +210,9 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 4, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }} >
             <motion.p
-              className="mb-15 mt-40 ml-auto mr-[5%] uppercase text-gray-500 w-fit"
+              className="mb-10 lg:mb-15 lg:mt-40 ml-auto mr-[5%] uppercase text-gray-500 w-fit"
               initial={{ x: 80, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
@@ -222,21 +220,21 @@ export default function Home() {
             >Blog
             </motion.p>
             <motion.hr
-              className="w-[90%] mx-auto border-t-1 border-gray-500 mb-15"
+              className="w-[90%] mx-auto border-t-1 border-gray-500 mb-10 lg:mb-15"
               initial={{ x: -80, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
               viewport={{ once: true }}
             />
-            <h4 className="mb-15 text-3xl ml-[5%] sm:text-4xl md:text-5xl lg:text-6xl flex lg:justify-center lg:align-center lg:mb-25">
+            <h4 className="mb-10 lg:mb-15 text-3xl ml-[5%] sm:text-4xl md:text-5xl lg:text-6xl flex lg:justify-center lg:align-center lg:mb-25">
               <span className="sm:mr-3 mr-3">Conteúdos</span>
               <span className="text-[#c9964d]">para você</span>
             </h4>
 
             <div className="flex-col flex justify-center items-center gap-10 mx-5 mb-30 sm:flex-col md:flex-row lg:flex-row ">
 
-              <div className="h-[550px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
-                <div className="relative w-full h-[279px] md:h-[150px]">
+              <div className="h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
+                <div className="relative w-full h-[200px] md:h-[150px]">
                   <Image src="/images/sobrancelha.png" alt="Postagem do blog explicando tudo que você precisa saber sobre design de sobrancelhas" fill className="object-cover" />
                 </div>
                 <p className="md:text-md text-xl pt-5 px-5">Design de Sobrancelhas: tudo o que você precisa saber</p>
@@ -264,8 +262,8 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="h-[550px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
-                <div className=" md:h-[150px] relative w-full h-[279px]">
+              <div className="h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
+                <div className=" md:h-[150px] relative w-full h-[200px]">
                   <Image src="/images/micro.png" alt="Design com Henna" fill className="object-cover" />
                 </div>
                 <p className="md:text-md text-xl pt-5 px-5">10 hábitos essenciais para prolongar a micropigmentação</p>
@@ -293,8 +291,8 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="h-[550px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
-                <div className="relative w-full h-[279px] md:h-[150px]">
+              <div className="h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
+                <div className="relative w-full h-[200px] md:h-[150px]">
                   <Image src="/images/nail.png" alt="Design com Henna" fill className="object-cover" />
                 </div>
                 <p className="md:text-md text-xl pt-5 px-5">Quais cuidados especiais suas unhas devem ter?</p>

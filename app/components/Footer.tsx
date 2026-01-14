@@ -2,16 +2,16 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="mt-15 bg-[#4c2a12] text-white p-6 text-center">
+        <footer className="text-md lg:mt-15 bg-[#4c2a12] text-white p-6">
             <div className="flex-col sm:flex-col md:flex-row flex justify-between align-center mt-15">
 
                 <div className="w-full max-w-[600px]">
                     <div className="flex flex-col items-start">
                         <p className="text-xl mb-5">Cadastre-se para receber nossa Newsletter</p>
-                        <p className="text-md text-left mb-5">Inscreva-se e seja o primeiro a saber sobre nossas últimas novidades, ofertas exclusivas e muito mais.</p>
+                        <p className="text-sm text-left mb-5">Inscreva-se e seja o primeiro a saber sobre nossas últimas novidades, ofertas exclusivas e muito mais.</p>
                     </div>
 
-                    <form className="mt-4 flex w-full gap-2 mb-15">
+                    <form className="mt-4 flex w-full gap-2 mb-10">
                         <input
                             type="email"
                             placeholder="Endereço de e-mail"
@@ -58,11 +58,11 @@ export default function Footer() {
                         <Image
                             src="/images/logo_studio.png"
                             alt="Newsletter"
-                            width={200}
+                            width={100}
                             height={200}
                             className="mt-4"
                         />
-                        <div className="flex flex-start">
+                        <div className="flex flex-start text-sm">
                             <p>© 2026 Studio Cirqueira's. Todos os direitos reservados.</p>
                         </div>
                         <div className="flex flex-start items-center mt-4">
@@ -83,39 +83,39 @@ export default function Footer() {
 
                     <div className="flex items-start flex-col">
                         <div className="flex justify-center items-center">
-                            <p className="text-lg">Atendimento ao cliente</p>
+                            <p className="text-sm lg:text-lg">Atendimento ao cliente</p>
                         </div>
                         <div className="flex">
                             <Image
                                 src="/icons/whatsapp.svg"
                                 alt="Atendimento ao cliente"
-                                width={25}
+                                width={15}
                                 height={20}
                                 className="mx-auto mr-2 invert"
                             />
-                            <p className="text-lg">+55 (11) 93238-2035 - Studio</p>
+                            <p className="text-sm">+55 (11) 93238-2035 - Studio</p>
                         </div>
-                        <div className="sm:mt-10 mt-20">
-                            <p>Nos acompanhe nas redes</p>
+                        <div className="sm:mt-10 mt-5">
+                            <p className="text-sm">Nos acompanhe nas redes</p>
                             <div className="flex">
                                 <Image
                                     src="/icons/instagram.svg"
                                     alt="Atendimento ao cliente"
-                                    width={30}
+                                    width={20}
                                     height={30}
                                     className="mx-auto invert"
                                 />
                                 <Image
                                     src="/icons/tiktok.svg"
                                     alt="Atendimento ao cliente"
-                                    width={30}
+                                    width={20}
                                     height={30}
                                     className="mx-auto invert"
                                 />
                                 <Image
                                     src="/icons/youtube.svg"
                                     alt="Atendimento ao cliente"
-                                    width={30}
+                                    width={20}
                                     height={30}
                                     className="mx-auto invert"
                                 />
@@ -129,38 +129,38 @@ export default function Footer() {
                 <ul className="flex flex-wrap justify-center gap-3 py-4 text-white sm:flex-nowrap">
 
                     <li className="relative px-4 before:absolute before:left-0 before:text-[#bc743a]">
-                        <a className="relative tracking-wider inline-block after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#bc743a] after:transition-all after:duration-300 hover:after:w-full">
+                        <a className="relative text-sm tracking-wider inline-block after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#bc743a] after:transition-all after:duration-300 hover:after:w-full">
                             Quem Somos
                         </a>
                     </li>
 
                     <li className="relative px-4 before:content-['|'] before:absolute before:left-0 before:text-[#bc743a]">
-                        <a className="relative tracking-wider inline-block after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#bc743a] after:transition-all after:duration-300 hover:after:w-full">
+                        <a className="relative text-sm tracking-wider inline-block after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#bc743a] after:transition-all after:duration-300 hover:after:w-full">
                             Procedimentos
                         </a>
                     </li>
 
 
                     <li className="relative px-4 before:content-['|'] before:absolute before:left-0 before:text-[#bc743a]">
-                        <a className="relative tracking-wider inline-block after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#bc743a] after:transition-all after:duration-300 hover:after:w-full">
+                        <a className="relative text-sm tracking-wider inline-block after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#bc743a] after:transition-all after:duration-300 hover:after:w-full">
                             Academy
                         </a>
                     </li>
 
                     <li className="relative px-4 before:content-['|'] before:absolute before:left-0 before:text-[#bc743a]">
-                        <a className="relative tracking-wider inline-block after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#bc743a] after:transition-all after:duration-300 hover:after:w-full">
+                        <a className="relative text-sm tracking-wider inline-block after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#bc743a] after:transition-all after:duration-300 hover:after:w-full">
                             Studio
                         </a>
                     </li>
 
                     <li className="relative px-4 before:content-['|'] before:absolute before:left-0 before:text-[#bc743a]">
-                        <a className="relative tracking-wider inline-block after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#bc743a] after:transition-all after:duration-300 hover:after:w-full">
+                        <a className="relative text-sm tracking-wider inline-block after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#bc743a] after:transition-all after:duration-300 hover:after:w-full">
                             Blog
                         </a>
                     </li>
 
                     <li className="relative px-4 before:content-['|'] before:absolute before:left-0 before:text-[#bc743a]">
-                        <a className="relative tracking-wider inline-block after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#bc743a] after:transition-all after:duration-300 hover:after:w-full">
+                        <a className="relative text-sm tracking-wider inline-block after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#bc743a] after:transition-all after:duration-300 hover:after:w-full">
                             Contato
                         </a>
                     </li>
