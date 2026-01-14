@@ -80,7 +80,7 @@ export default function Footer() {
                             </a>
                         </div>
                     </div>
-                    
+
                     <div className="flex items-start flex-col">
                         <div className="flex justify-center items-center">
                             <p className="text-lg">Atendimento ao cliente</p>
@@ -126,7 +126,8 @@ export default function Footer() {
             </div>
 
             <div className="">
-                <ul className="flex justify-center py-4 text-white">
+                <ul className="flex flex-wrap justify-center gap-3 py-4 text-white sm:flex-nowrap">
+
                     <li className="relative px-4 before:absolute before:left-0 before:text-[#bc743a]">
                         <a className="relative tracking-wider inline-block after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#bc743a] after:transition-all after:duration-300 hover:after:w-full">
                             Quem Somos

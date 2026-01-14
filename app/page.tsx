@@ -18,35 +18,40 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="flex flex-col-reverse sm:flex-col-reverse md:flex-row justify-center items-center pt-5"
+            className="flex flex-col-reverse md:flex-row justify-center items-center md:items-start pt-5"
           >
             <Image
-              className="w-[500px] sm:w-[500px] xl:w-[700px]"
+              className="w-[300px] sm:w-[500px] xl:w-[700px]"
               src="/images/meninas-studio.png"
               alt="Imagem meninas"
               width={700}
               height={900}
             />
 
-            <div className="p-4 w-150 text-black">
-              <p className="max-w-[400px] sm:w-[70%]">
-                <span className="text-7xl sm:text-7xl md:text-8xl xl:text-9xl font-playfair font-bold">Essência real, </span>
-                <span className="text-6xl sm:text-6xl md:text-7xl xl:text-8xl font-poppins italic">efeito duradouro.</span>
+            <div className="p-4 w-full max-w-[500px] text-black">
+              <p className="max-w-[400px]">
+                <span className="text-5xl sm:text-7xl md:text-8xl xl:text-9xl font-playfair font-bold">
+                  Essência real,{" "}
+                </span>
+                <span className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-poppins italic">
+                  efeito duradouro.
+                </span>
               </p>
 
-              <p className="max-w-[450px] sm:w-[80%] sm:mt-10 md:text-md xl:text-lg font-inter my-10">
+              <p className="text-sm max-w-[450px] md:text-md xl:text-lg font-inter my-5">
                 Questionamos padrões e valorizamos o que é real, entregando resultados que vão além do esperado.
               </p>
 
-              <button className="relative overflow-hidden uppercase cursor-pointer w-[250px] h-[50px] leading-[50px] text-black transition-all duration-300 group">
+              <button className="relative overflow-hidden uppercase cursor-pointer w-[100px] h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group">
                 <span className="absolute inset-0 bg-[#4c2a12]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
                 <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
-                <span className="relative z-10 transition-all duration-300 group-hover:tracking-widest">
+                <span className="text-sm relative z-10 transition-all duration-300 group-hover:tracking-widest">
                   Saiba mais
                 </span>
               </button>
             </div>
           </motion.div>
+
         </section>
 
         <section className="mb-20">
@@ -65,7 +70,7 @@ export default function Home() {
             viewport={{ once: true }}
           />
           <div className="flex-col mx-[5%] sm:flex-col sm:items-start sm:mx-10 md:items-center lg:justify-around lg:items-center xl:justify-around xl:items-center flex">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl text-black mb-15">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl xl:text-6xl text-black mb-15">
               <span>Conheça o </span>
               <span className="text-[#c9964d]">Studio Cirqueira's</span>
             </h1>
