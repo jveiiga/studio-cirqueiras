@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <footer className="mt-15 bg-[#4c2a12] text-white p-6 text-center">
-            <div className="sm:flex-col md:flex-row flex justify-between align-center mt-15">
+            <div className="flex-col sm:flex-col md:flex-row flex justify-between align-center mt-15">
 
                 <div className="w-full max-w-[600px]">
                     <div className="flex flex-col items-start">
@@ -53,7 +53,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="sm:flex-col-reverse md:flex-col flex">
+                <div className="flex-col-reverse sm:flex-col-reverse md:flex-col flex">
                     <div className="block sm:mb-5 md:hidden">
                         <Image
                             src="/images/logo_studio.png"
