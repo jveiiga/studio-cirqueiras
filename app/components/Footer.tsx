@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <footer className="text-md lg:mt-15 bg-[#4c2a12] text-white p-6">
-            <div className="flex-col sm:flex-col md:flex-row flex justify-between align-center mt-15">
+            <div className=" flex flex-col justify-around align-center mt-15 lg:flex-row">
 
                 <div className="w-full max-w-[600px]">
                     <div className="flex flex-col items-start">
@@ -25,7 +25,7 @@ export default function Footer() {
                         </button>
                     </form>
 
-                    <div className="hidden sm:hidden md:flex md:flex-col">
+                    <div className="hidden lg:flex lg:flex-col">
                         <Image
                             src="/images/logo_studio.png"
                             alt="Newsletter"
@@ -53,8 +53,9 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex-col-reverse sm:flex-col-reverse md:flex-col flex">
-                    <div className="block sm:mb-5 md:hidden">
+                <div className="flex flex-col-reverse">
+                    <div className="block sm:mb-5 lg:hidden">
+
                         <Image
                             src="/images/logo_studio.png"
                             alt="Newsletter"
@@ -81,7 +82,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="flex items-start flex-col">
+                    <div className="flex items-start flex-col lg:h-full">
                         <div className="flex justify-center items-center">
                             <p className="text-sm lg:text-lg">Atendimento ao cliente</p>
                         </div>

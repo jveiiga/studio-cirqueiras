@@ -6,13 +6,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
+    extend: {
+      screens: {
+        // Adiciona novos breakpoints sem remover os padrões
+        '3xl': '1920px',
+      },
     },
-    extend: {},
   },
   plugins: [],
 };

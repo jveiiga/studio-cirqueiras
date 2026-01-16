@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     "Studio Cirqueira’s é especializado em design de sobrancelhas, lash designer e nail designer. Cuidados estéticos personalizados para realçar sua beleza com naturalidade e precisão.",
 };
 
+// Correto: exportar a viewport separadamente (string é suficiente)
+export const viewport = "width=device-width, initial-scale=1";
 
 export default function RootLayout({
   children,

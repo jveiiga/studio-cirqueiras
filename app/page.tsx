@@ -11,38 +11,38 @@ export default function Home() {
       <Header />
       <main>
         <section
-          className="flex justify-center items-center bg-[#fdecda]"
+          className="bg-[#fdecda]"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="flex flex-col-reverse md:flex-row justify-center items-center md:items-start pt-5"
+            className="flex flex-col-reverse pt-5 lg:flex-row-reverse xl:justify-center"
           >
             <Image
-              className="w-[300px] sm:w-[500px] xl:w-[700px]"
+              className="w-[300px] sm:w-[500px] md:w-[600px] xl:w-[700px]"
               src="/images/meninas-studio.png"
               alt="Imagem meninas"
               width={700}
               height={900}
             />
 
-            <div className="p-4 w-full max-w-[500px] text-black">
-              <p className="max-w-[400px]">
-                <span className="text-5xl sm:text-7xl md:text-8xl xl:text-9xl font-playfair font-bold">
+            <div className="p-4 max-w-ful lg:flex lg:flex-col lg:justify-center text-black">
+              <p className="lg:max-w-[500px]">
+                <span className="text-5xl sm:text-7xl md:text-8xl lg:text8xl xl:text-9xl font-playfair font-bold">
                   Essência real,{" "}
                 </span>
-                <span className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-poppins italic">
+                <span className="text-xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-8xl font-poppins italic">
                   efeito duradouro.
                 </span>
               </p>
 
-              <p className="text-sm max-w-[450px] md:text-md xl:text-lg font-inter my-5">
+              <p className="text-sm max-w-[500px] my-5 sm:text-base md:text-md lg:max-w-[350px] lg:my-10 lg:max-w-[400px] xl:text-lg font-inter">
                 Questionamos padrões e valorizamos o que é real, entregando resultados que vão além do esperado.
               </p>
 
-              <button className="relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group">
+              <button className="relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] md:h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group">
                 <span className="absolute inset-0 bg-[#4c2a12]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
                 <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
                 <span className="text-sm relative text-sm z-10 transition-all duration-300 group-hover:tracking-widest">
@@ -73,24 +73,28 @@ export default function Home() {
               <span>Conheça o </span>
               <span className="text-[#c9964d]">Studio Cirqueira's</span>
             </h1>
-            <p className="text-sm max-w-[500px] mb-15 sm:text-sm md:text-md md:max-w-[650px] lg:text-lg lg:max-w-[800px] xl:text-lg xl:max-w-[800px]">No nosso studio, o foco está em cuidados bem executados, com atenção aos detalhes e respeito à sua individualidade, para realçar o que há de melhor em você.</p>
+            <p className="text-sm max-w-[500px] mb-15 sm:text-sm md:text-md md:max-w-[650px] lg:text-lg lg:max-w-[800px] lg:text-center xl:text-lg xl:max-w-[800px]">
+              No nosso studio, o foco está em cuidados bem executados, com atenção aos detalhes e respeito à sua individualidade, para realçar o que há de melhor em você.
+            </p>
           </div>
 
           <div className="flex items-stretch justify-center rounded-3xl">
             <div className="flex-col-reverse sm:flex-col-reverse sm:text-md md:flex-row lg:flex-row xl:flex-row flex mx-5 overflow-hidden rounded-3xl">
 
-              <div className="relative w-full h-[300px] md:w-[500px] md:h-[500px] lg:w-[300px] lg:h-[500px] xl:w-[500px] xl:h-[500px]">
+              <div className="relative w-full h-[300px] md:w-full md:h-full lg:w-[400px] lg:h-[500px] xl:w-[500px] xl:h-[500px]">
                 <Image
                   src="/images/std-cirqueiras.png"
                   alt="Imagem meninas"
                   fill
-                  className="sm:object-cover"
+                  className="sm:object-cover md:object-fill"
                 />
               </div>
 
               <div className="bg-[#c9964d] flex flex-col justify-center items-start p-6">
 
-                <p className="text-sm font-bold font-poppins sm:text-2xl sm:mt-30 md:text-3xl lg:max-w-[500px] text-3xl max-w-xl mx-auto my-6">Valorizar o que é natural é uma escolha que reflete equilíbrio, autenticidade e bem-estar.</p>
+                <p className="text-sm font-bold font-poppins sm:text-2xl sm:mt-30 md:text-2xl lg:max-w-[500px] text-3xl max-w-xl mx-auto my-6">
+                  Valorizar o que é natural é uma escolha que reflete equilíbrio, autenticidade e bem-estar.
+                </p>
                 <p className="text-sm mb-6">Conheça nosso local de atendimento.</p>
                 <a
                   href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
@@ -134,7 +138,7 @@ export default function Home() {
                   height={200}
                 />
                 <div className="">
-                  <p className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl lg:w-[500px] xl:w-[600px] xl:max-w-xl xl:text-7xl">
+                  <p className="text-2xl sm:text-4xl md:text-5xl md:min-w-[380px] lg:text-6xl lg:w-[500px] xl:w-[600px] xl:max-w-xl xl:text-7xl">
                     <span className="font-poppins mt-5 text-[#bc743a]">Onde </span>
                     <span className="font-poppins mt-5 text-[#4c2a12]">nasce o</span>
                   </p>
@@ -150,9 +154,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="">
+              <div className="md:flex md:flex-col md:items-center md:justify-center">
                 <Image
-                  className="w-full sm:w-full md:w-[500px] lg:w-[550px] xl:w-[600px] rounded-lg"
+                  className="w-full lg:w-full xl:w-[600px] rounded-lg"
                   src="/images/meninas-2.jpeg"
                   alt="Imagem procedimentos"
                   width={460}
@@ -160,14 +164,14 @@ export default function Home() {
                 />
                 <div className="flex gap-3 mt-5">
                   <Image
-                    className="w-[49%] sm:w-full md:w-[220px] lg:w-[218px] xl:w-[235px] rounded-lg"
+                    className="w-[49%] sm:w-full md:w-[110px] lg:w-[165px] xl:w-[235px] rounded-lg"
                     src="/images/raquel.jpg"
                     alt="Imagem procedimentos"
                     width={200}
                     height={300}
                   />
                   <Image
-                    className="w-[49%] sm:w-full md:w-[220px] lg:w-[218px] xl:w-[235px] rounded-lg"
+                    className="w-[49%] sm:w-full md:w-[110px] lg:w-[165px] xl:w-[235px] rounded-lg"
                     src="/images/mariana.jpg"
                     alt="Imagem procedimentos"
                     width={200}
@@ -231,13 +235,13 @@ export default function Home() {
               <span className="text-[#c9964d]">para você</span>
             </h4>
 
-            <div className="flex-col flex justify-center items-center gap-10 mx-5 mb-30 sm:flex-col md:flex-row lg:flex-row ">
+            <div className="flex-col flex justify-center items-center gap-10 mx-5 mb-30 lg:flex-row ">
 
-              <div className="h-[300px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
-                <div className="relative w-full h-[150px] md:h-[150px]">
+              <div className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
+                <div className="relative w-full h-[150px] md:h-[200px] lg:h-[130px] xl:h-[230px]">
                   <Image src="/images/sobrancelha.png" alt="Postagem do blog explicando tudo que você precisa saber sobre design de sobrancelhas" fill className="object-cover" />
                 </div>
-                <p className="text-sm md:text-md xl:text-xl pt-5 px-5">Design de Sobrancelhas: tudo o que você precisa saber</p>
+                <p className="text-sm md:text-lg lg:text-base xl:text-xl pt-5 px-5">Design de Sobrancelhas: tudo o que você precisa saber</p>
                 <button
                   type="button"
                   className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130] h-[40] lg:w-[150px] lg:h-[40px] md:mt-5 md:w-[130px]
@@ -262,11 +266,11 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="h-[300px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
-                <div className=" md:h-[150px] relative w-full h-[150px]">
+              <div className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
+                <div className=" md:h-[200px] lg:h-[130px] xl:h-[230px] relative w-full h-[150px]">
                   <Image src="/images/micro.png" alt="Design com Henna" fill className="object-cover" />
                 </div>
-                <p className="text-sm md:text-md xl:text-xl pt-5 px-5">10 hábitos essenciais para prolongar a micropigmentação</p>
+                <p className="text-sm md:text-lg lg:text-base xl:text-xl pt-5 px-5">10 hábitos essenciais para prolongar a micropigmentação</p>
                 <button
                   type="button"
                   className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130] h-[40] lg:w-[150px] lg:h-[40px] md:mt-5 md:w-[130px]
@@ -291,11 +295,11 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="h-[300px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
-                <div className="relative w-full h-[150px] md:h-[150px]">
+              <div className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
+                <div className="relative w-full h-[150px] md:h-[200px] lg:h-[130px] xl:h-[230px]">
                   <Image src="/images/nail.png" alt="Design com Henna" fill className="object-cover" />
                 </div>
-                <p className="text-sm md:text-md xl:text-xl pt-5 px-5">Quais cuidados especiais suas unhas devem ter?</p>
+                <p className="text-sm md:text-lg lg:text-base xl:text-xl pt-5 px-5">Quais cuidados especiais suas unhas devem ter?</p>
                 <button
                   type="button"
                   className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130] h-[40] lg:w-[150px] lg:h-[40px] md:mt-5 md:w-[130px]
@@ -314,7 +318,7 @@ export default function Home() {
                       alt="Seta para direita"
                       width={18}
                       height={18}
-                      className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
+                      className="transition-all duration-300 group-hover:invert group-hover:translate-x-1 md:object-contain"
                     />
                   </span>
                 </button>

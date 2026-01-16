@@ -17,11 +17,11 @@ export default function CardSlider() {
           disableOnInteraction: false,
         }}
         breakpoints={{
-          680: { slidesPerView: 1 },
+          640: { slidesPerView: 1 },
           768: { slidesPerView: 1 },
-          1024: { slidesPerView: 2 },
-          1200: { slidesPerView: 3 },
-          1280: { slidesPerView: 4},
+          1024: { slidesPerView: 3 },
+          1280: { slidesPerView: 3 },
+          1536: { slidesPerView: 4}
         }}
       >
         <SwiperSlide className="">
