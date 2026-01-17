@@ -21,11 +21,11 @@ export default function Home() {
             className="flex flex-col-reverse pt-5 lg:flex-row-reverse xl:justify-center"
           >
             <Image
-              className="w-[300px] sm:w-[500px] md:w-[600px] xl:w-[700px]"
+              className="w-[400px] sm:w-[500px] md:w-[600px] xl:w-[700px]"
               src="/images/meninas-studio.png"
               alt="Imagem meninas"
-              width={700}
-              height={900}
+              width={400}
+              height={400}
             />
 
             <div className="p-4 max-w-ful lg:flex lg:flex-col lg:justify-center text-black">
@@ -33,7 +33,7 @@ export default function Home() {
                 <span className="text-5xl sm:text-7xl md:text-8xl lg:text8xl xl:text-9xl font-playfair font-bold">
                   Essência real,{" "}
                 </span>
-                <span className="text-xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-8xl font-poppins italic">
+                <span className="text-4xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-8xl font-poppins italic">
                   efeito duradouro.
                 </span>
               </p>

@@ -112,7 +112,7 @@ export default function About() {
           <div>
           </div>
           <motion.hr
-            className="w-[90%] my-20 border-gray-800 lg:mx-auto border-t-1 lg:mb-10"
+            className="w-[90%] my-10 border-gray-800 lg:mx-auto border-t-1 lg:mb-10"
             initial={{ x: 80, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
