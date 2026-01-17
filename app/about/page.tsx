@@ -98,7 +98,7 @@ export default function About() {
             </div>
             <Image
               className="mt-5 w-full lg:w-full xl:w-[600px] rounded-lg"
-              src="/images/mariana-4.jpg"
+              src="/images/maria-4.jpg"
               alt="Imagem procedimentos"
               width={460}
               height={600}
