@@ -75,7 +75,7 @@ export default function About() {
           <div className="mt-10 md:flex md:flex-col md:items-center md:justify-center">
             <Image
               className="w-full lg:w-full xl:w-[600px] rounded-lg"
-              src="/images/mari-1.jpeg"
+              src="/images/maria-1.jpg"
               alt="Imagem procedimentos"
               width={460}
               height={600}
@@ -83,14 +83,14 @@ export default function About() {
             <div className="flex gap-3 mt-5">
               <Image
                 className="w-[49%] sm:w-full md:w-[110px] lg:w-[165px] xl:w-[235px] rounded-lg"
-                src="/images/mari-2.jpeg"
+                src="/images/maria-2.jpg"
                 alt="Imagem procedimentos"
                 width={200}
                 height={300}
               />
               <Image
                 className="w-[49%] sm:w-full md:w-[110px] lg:w-[165px] xl:w-[235px] rounded-lg"
-                src="/images/mari-3.jpg"
+                src="/images/maria-3.jpg"
                 alt="Imagem procedimentos"
                 width={200}
                 height={300}
@@ -98,7 +98,7 @@ export default function About() {
             </div>
             <Image
               className="mt-5 w-full lg:w-full xl:w-[600px] rounded-lg"
-              src="/images/mariana-5.jpeg"
+              src="/images/mariana-4.jpg"
               alt="Imagem procedimentos"
               width={460}
               height={600}
@@ -135,7 +135,7 @@ export default function About() {
           <div className="my-10 md:flex md:flex-col md:items-center md:justify-center">
             <Image
               className="w-full lg:w-full xl:w-[600px] rounded-lg"
-              src="/images/raquel-1.jpeg"
+              src="/images/quel-1.jpg"
               alt="Imagem procedimentos"
               width={460}
               height={600}
@@ -143,14 +143,14 @@ export default function About() {
             <div className="flex gap-3 mt-5">
               <Image
                 className="w-[49%] sm:w-full md:w-[110px] lg:w-[165px] xl:w-[235px] rounded-lg"
-                src="/images/raquel-2.jpeg"
+                src="/images/quel-2.jpg"
                 alt="Imagem procedimentos"
                 width={200}
                 height={300}
               />
               <Image
                 className="w-[49%] sm:w-full md:w-[110px] lg:w-[165px] xl:w-[235px] rounded-lg"
-                src="/images/raquel-3.jpeg"
+                src="/images/quel-3.jpg"
                 alt="Imagem procedimentos"
                 width={200}
                 height={300}
@@ -158,7 +158,7 @@ export default function About() {
             </div>
             <Image
               className="mt-5 w-full lg:w-full xl:w-[600px] rounded-lg"
-              src="/images/raquel-4.jpeg"
+              src="/images/quel-4.jpg"
               alt="Imagem procedimentos"
               width={460}
               height={600}
