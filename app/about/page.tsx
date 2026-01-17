@@ -16,7 +16,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="relative flex flex-col-reverse lg:pt-5 lg:flex-row-reverse xl:justify-center bg-[url('/images/meninas-3.png')] bg-no-repeat bg-cover bg-center">
+          className="relative min-h-[700px] flex flex-col-reverse lg:pt-5 lg:flex-row-reverse xl:justify-center bg-[url('/images/meninas-3.png')] bg-no-repeat bg-cover bg-bottom">
           {/* overlay gradiente */}
           <div
             className="absolute inset-0 bg-gradient-to-b from-black/20 via-[#fdecda]/30 to-[#fdecda]/100" />
@@ -27,11 +27,16 @@ export default function About() {
               </span>
             </p>
 
-            <p className="text-sm max-w-[500px] my-7 sm:text-base lg:max-w-[400px] xl:text-lg font-inter">
+            <p className="text-sm max-w-[500px] mt-5 sm:text-base lg:max-w-[400px] xl:text-lg font-inter">
               Conheça nossa trajetória, os caminhos percorridos até aqui e o propósito que nos guia.
             </p>
 
-            <button className="relative mb-5 overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] leading-[50px] text-black transition-all duration-300 group">
+            <button
+              onClick={() =>
+                document.getElementById("sobre")?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="relative my-10 overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] leading-[50px] text-black transition-all duration-300 group"
+            >
               <span className="absolute inset-0 bg-[#4c2a12]/20 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
               <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
               <span className="relative z-10 text-sm transition-all duration-300 group-hover:tracking-widest">
@@ -56,8 +61,8 @@ export default function About() {
         </motion.div>
       </section>
 
-      <section>
-        <div className="px-5">
+      <section id="sobre">
+        <div className="px-5 mb-20">
           <p className="text-2xl font-inter text-[#c9964d] my-5 sm:text-4xl md:text-5xl xl:text-6xl">
             <span>Mariana </span>
             <span className="text-black">Cirqueira</span>
@@ -104,9 +109,10 @@ export default function About() {
               height={600}
             />
           </div>
-
+          <div>
+          </div>
           <motion.hr
-            className="w-[90%] my-10 border-gray-800 lg:mx-auto border-t-1 lg:mb-10"
+            className="w-[90%] my-20 border-gray-800 lg:mx-auto border-t-1 lg:mb-10"
             initial={{ x: 80, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
