@@ -62,11 +62,11 @@ export default function Header() {
           <ul className="flex flex-col items-center gap-6 py-6">
             {[
               { label: "Quem Somos", href: "/about" },
-              { label: "Procedimentos", href: "/procedimentos" },
+              { label: "Procedimentos", href: "/procedures" },
               { label: "Academy", href: "/academy" },
               { label: "Studio", href: "/studio" },
               { label: "Blog", href: "/blog" },
-              { label: "Contato", href: "/contato" },
+              { label: "Contato", href: "/contact" },
             ].map(item => (
               <li key={item.label} className="text-lg">
                 <Link href={item.href}>{item.label}</Link>
