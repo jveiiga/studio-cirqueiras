@@ -14,6 +14,15 @@ const Divider = () => (
   />
 );
 
+type ProcedureItemProps = {
+    image: string;
+    title: string;
+    description: string;
+    buttonText: string;
+    imageClass?: string;
+    textSize?: string;
+  };
+
 const ProcedureItem = ({
   image,
   title,
@@ -21,7 +30,7 @@ const ProcedureItem = ({
   buttonText,
   imageClass = "",
   textSize = "text-sm",
-}) => (
+}: ProcedureItemProps) => (
   <div className="px-5 md:flex md:flex-col-reverse lg:max-w-[600px] xl:max-w-full xl:flex xl:flex-row-reverse xl:justify-between xl:mb-40 2xl:justify-evenly">
     <div>
       <Image
