@@ -24,7 +24,7 @@ export default function Header() {
         {[
           { label: "Quem Somos", href: "/about" },
           { label: "Procedimentos", href: "/procedures" },
-          { label: "Academy", href: "/academy" },
+          { label: "Beauty & Academy", href: "/academy" },
           { label: "Studio", href: "/studio" },
           { label: "Blog", href: "/blog" },
           { label: "Contato", href: "/contact" },
@@ -63,7 +63,7 @@ export default function Header() {
             {[
               { label: "Quem Somos", href: "/about" },
               { label: "Procedimentos", href: "/procedures" },
-              { label: "Academy", href: "/academy" },
+              { label: "Beauty & Academy", href: "/academy" },
               { label: "Studio", href: "/studio" },
               { label: "Blog", href: "/blog" },
               { label: "Contato", href: "/contact" },

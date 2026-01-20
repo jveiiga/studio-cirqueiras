@@ -139,7 +139,7 @@ export default function Procedures() {
         </motion.div>
       </section>
 
-      <section>
+      <section className="mb-30">
         <ProcedureItem
           image="/images/nail-art.jpg"
           title="Nail Art"
