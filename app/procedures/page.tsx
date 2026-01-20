@@ -4,6 +4,15 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { motion } from "framer-motion";
 
+type ProcedureItemProps = {
+    image: string;
+    title: string;
+    description: string;
+    buttonText: string;
+    imageClass?: string;
+    textSize?: string;
+  };
+
 const Divider = () => (
   <motion.hr
     className="w-[90%] my-10 border-gray-800 mx-auto border-t-1 lg:mb-10 xl:my-20"
@@ -13,15 +22,6 @@ const Divider = () => (
     viewport={{ once: true }}
   />
 );
-
-type ProcedureItemProps = {
-    image: string;
-    title: string;
-    description: string;
-    buttonText: string;
-    imageClass?: string;
-    textSize?: string;
-  };
 
 const ProcedureItem = ({
   image,
@@ -87,7 +87,7 @@ export default function Procedures() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="relative min-h-[900px] flex flex-col-reverse bg-[url('/images/mega-fox-bg.png')] bg-no-repeat bg-bottom bg-cover md:min-h-[800px] mb-30 lg:bg-fill lg:bg-[position:90%_30%]"
+          className="relative min-h-[900px] flex flex-col-reverse bg-[url('/images/mega-fox-bg.png')] bg-no-repeat bg-bottom bg-cover md:min-h-[800px] mb-30 lg:bg-fill md:bg-[position:90%_20%] lg:bg-[position:90%_30%]"
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-[#fdecda]/30 to-[#fdecda]/100" />
 
