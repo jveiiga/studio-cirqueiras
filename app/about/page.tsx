@@ -16,7 +16,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="relative min-h-[700px] flex flex-col-reverse bg-[url('/images/meninas-3.png')] bg-no-repeat bg-bottom bg-cover md:min-h-[800px] lg:bg-contain">
+          className="relative min-h-[700px] flex flex-col-reverse bg-[url('/images/meninas-3.png')] bg-no-repeat bg-bottom bg-cover md:min-h-[800px] lg:bg-fill lg:bg-[position:90%_30%] xl:bg-[position:90%_25%]">
           {/* overlay gradiente */}
           <div
             className="absolute inset-0 bg-gradient-to-b from-black/20 via-[#fdecda]/30 to-[#fdecda]/100" />
