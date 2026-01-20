@@ -69,14 +69,14 @@ export default function About() {
                 <span>Mariana </span>
                 <span className="text-black">Cirqueira</span>
               </p>
-              <p className="max-w-[800px] lg:text-lg lg:max-w-[500px]"><div className="mb-10">
+              <p className="max-w-[800px] lg:text-lg lg:max-w-[500px]"><div className="mb-5 lg:mb-10">
                 Ela sempre foi movida pelo universo da beleza e fez das unhas o seu propósito de vida.
                 Empreendedora e instrutora Nails, transformou uma decisão tomada aos 16 anos em uma carreira sólida,
                 construída com coragem, aprendizado contínuo e visão de futuro. Hoje, vive o extraordinário através das
                 unhas, impactando vidas e elevando a autoestima de cada cliente.
               </div>
 
-                <div className="mb-10">
+                <div className="mb-5 lg:mb-10">
                   Com uma trajetória marcada por desafios e evolução constante, tornou-se referência não apenas pela técnica,
                   mas pela mentalidade empreendedora. Acredito que seu diferencial está na consistência: aprender todos os dias e nunca se acomodar.
                   <span className="font-bold"> Mais do que formar profissionais, ela forma mulheres confiantes</span>.
@@ -147,7 +147,7 @@ export default function About() {
                 <span className="text-[#c9964d]">Cirqueira</span>
               </p>
               <p className="max-w-[800px] lg:text-lg lg:max-w-[600px]">
-                <div className="mb-10">
+                <div className="mb-5 lg:mb-10">
                   Guiada pela paixão e pela beleza, ela encontrou no design de sobrancelhas o seu verdadeiro propósito.
                   Aos 18 anos, iniciou sua trajetória atendendo a domicílio, transformando o que era apenas um hobby
                   em uma carreira sólida, construída com dedicação, estudo e visão de crescimento.
@@ -155,7 +155,7 @@ export default function About() {
                   foi esse cenário que impulsionou sua evolução.
                 </div>
 
-                <div className="mb-10">
+                <div className="mb-5 lg:mb-10">
                   Seu trabalho passou a ser reconhecido, fortalecendo sua
                   autoridade e consolidando sua confiança como profissional.
                   <span className="font-bold"> Hoje, atua como lash designer, designer de sobrancelhas e mentora, com o objetivo de transformar a autoestima das
