@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react"
-import Image from "next/image"
+import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 interface HeaderProps {
@@ -10,19 +10,17 @@ interface HeaderProps {
 }
 
 export default function Header({ image, className }: HeaderProps) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <header className="bg-gradient-to-l from-[#4c2a12]/50 to-[#4c2a12]/0 flex items-center justify-between px-6 py-4 relative">
-
       <Link href="/">
-          <Image
-            src={image}
-            alt="Logo Studio Cirqueira's"
-            width={150}
-            height={200}
-            className="cursor-pointer"
-          />
+        <Image
+          src={image || "/images/default-logo.png"}
+          alt="Logo Studio Cirqueira's"
+          width={150}
+          height={200}
+        />
       </Link>
 
       {/* Menu desktop */}
@@ -34,7 +32,7 @@ export default function Header({ image, className }: HeaderProps) {
           { label: "Studio", href: "/studio" },
           { label: "Blog", href: "/blog" },
           { label: "Contato", href: "/contact" },
-        ].map(item => (
+        ].map((item) => (
           <li key={item.label} className="relative">
             <Link
               href={item.href}
@@ -45,7 +43,6 @@ export default function Header({ image, className }: HeaderProps) {
           </li>
         ))}
       </ul>
-
 
       {/* Botão desktop */}
       <button className="hidden cursor-pointer lg:block lg:text-sm w-[130px] h-[40px] border-2 border-[#333] hover:bg-[#4c2a12] hover:text-white transition">
@@ -73,7 +70,7 @@ export default function Header({ image, className }: HeaderProps) {
               { label: "Studio", href: "/studio" },
               { label: "Blog", href: "/blog" },
               { label: "Contato", href: "/contact" },
-            ].map(item => (
+            ].map((item) => (
               <li key={item.label} className="text-lg">
                 <Link href={item.href}>{item.label}</Link>
               </li>
@@ -86,8 +83,7 @@ export default function Header({ image, className }: HeaderProps) {
             </Link>
           </ul>
         </div>
-
       )}
     </header>
-  )
+  );
 }
