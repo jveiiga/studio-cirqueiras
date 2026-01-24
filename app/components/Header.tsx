@@ -3,20 +3,26 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link";
 
-export default function Header() {
+interface HeaderProps {
+  image?: string;
+  text?: string;
+  className?: string;
+}
+
+export default function Header({ image, className }: HeaderProps) {
   const [open, setOpen] = useState(false)
 
   return (
     <header className="bg-gradient-to-l from-[#4c2a12]/50 to-[#4c2a12]/0 flex items-center justify-between px-6 py-4 relative">
 
       <Link href="/">
-        <Image
-          src="/images/logo_studio.png"
-          alt="Logo Studio Cirqueira's"
-          width={150}
-          height={200}
-          className="cursor-pointer"
-        />
+          <Image
+            src={image}
+            alt="Logo Studio Cirqueira's"
+            width={150}
+            height={200}
+            className="cursor-pointer"
+          />
       </Link>
 
       {/* Menu desktop */}

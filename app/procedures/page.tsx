@@ -5,13 +5,13 @@ import Header from "../components/Header";
 import { motion } from "framer-motion";
 
 type ProcedureItemProps = {
-    image: string;
-    title: string;
-    description: string;
-    buttonText: string;
-    imageClass?: string;
-    textSize?: string;
-  };
+  image: string;
+  title: string;
+  description: string;
+  buttonText: string;
+  imageClass?: string;
+  textSize?: string;
+};
 
 const Divider = () => (
   <motion.hr
@@ -79,57 +79,103 @@ const ProcedureItem = ({
 export default function Procedures() {
   return (
     <div>
-      <Header />
-
-      <section className="bg-[#fdecda]">
+      <Header image="/images/logo_studio.png" />
+      <section className="bg-[#fdecda] bg-[url('/images/bg-procedures.png')] bg-no-repeat">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="relative min-h-[900px] flex flex-col-reverse bg-[url('/images/mega-fox-bg.png')] bg-no-repeat bg-bottom bg-cover md:min-h-[800px] mb-30 lg:bg-fill md:bg-[position:90%_20%] lg:bg-[position:90%_30%]"
+          className="
+      relative
+      flex flex-col mb-30 md:mb-20 lg:mb-30
+      h-[85vh]
+      lg:h-[1000px] 
+      sm:h-auto
+      sm:flex-row-reverse sm:justify-center
+      xl:h-[800px] xl:justify-around
+    "
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-[#fdecda]/30 to-[#fdecda]/100" />
+          {/* Container da imagem */}
+          <div className="relative z-0 w-full h-full sm:w-1/2 sm:h-auto">
+            <Image
+              src="/images/meninas-procedures.png"
+              alt="Procedimentos"
+              fill
+              sizes="(min-width: 640px) 50vw, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
 
-          <div className="relative flex flex-col justify-end z-10 p-4 max-w-full min-h-[500px] lg:flex lg:flex-col lg:justify-center text-black">
+          {/* Overlay de gradiente — MOBILE ORIGINAL */}
+          <div
+            className="
+        pointer-events-none
+        absolute inset-0 z-10
+        bg-gradient-to-b
+        from-black/40 via-[#fdecda]/50 to-[#fdecda]
+        sm:hidden
+      "
+          />
+
+          {/* Overlay de gradiente — DESKTOP */}
+          <div
+            className="
+        pointer-events-none
+        absolute inset-0 z-10
+        hidden sm:block
+        bg-gradient-to-b
+        from-black/30 via-[#fdecda]/40 to-[#fdecda]
+      "
+          />
+
+          {/* Container do conteúdo */}
+          <div
+            className="
+        absolute bottom-0 left-0 right-0
+        z-20
+        w-full
+        flex flex-col justify-end
+        p-4 min-h-[500px]
+        bg-transparent
+        sm:static sm:w-1/2 sm:bg-transparent
+        xl:justify-center
+      "
+          >
             <div className="lg:pl-[5%]">
               <h1 className="lg:max-w-[500px]">
-                <span className="text-5xl sm:text-7xl font-inter">
+                <span className="font-inter text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
                   Procedimentos
                 </span>
               </h1>
 
-              <p className="text-sm max-w-[500px] mt-5 sm:text-base lg:max-w-[500px] xl:text-lg font-inter">
-                Cada detalhe é planejado com precisão para proporcionar uma experiência singular, alinhada às suas necessidades e expectativas.
-                Nosso espaço exclusivo foi concebido para oferecer cuidado, conforto e bem-estar em um momento verdadeiramente especial.
+              <p className="text-sm max-w-[400px] mt-5 md:text-lg lg:leading-8 xl:text-2xl xl:max-w-[700px] font-inter">
+                Cada detalhe é planejado com precisão para proporcionar uma
+                experiência singular, alinhada às suas necessidades e
+                expectativas.
               </p>
 
               <button
                 onClick={() =>
-                  document.getElementById("sobre")?.scrollIntoView({ behavior: "smooth" })
+                  document
+                    .getElementById("sobre")
+                    ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="relative my-10 overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] leading-[50px] text-black transition-all duration-300 group"
+                className="my-10 uppercase w-[150px] h-[50px] text-black border border-[#4c2a12]/50 xl:w-[250px] xl:h-[60px]"
               >
-                <span className="absolute inset-0 bg-[#4c2a12]/20 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
-                <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
-                <span className="relative z-10 text-sm transition-all duration-300 group-hover:tracking-widest">
-                  Saiba Mais
-                </span>
+                Saiba Mais
               </button>
             </div>
 
             <motion.p
-              className="text-sm lg:my-5 lg:ml-[5%] uppercase text-gray-800"
+              className="text-sm lg:ml-[5%] uppercase text-gray-800"
               initial={{ x: -80, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
             >
               Conheça nossos procedimentos
             </motion.p>
 
             <motion.hr
-              className="w-[90%] my-5 border-gray-800 lg:mx-auto border-t-1 xl:my-20"
+              className="w-[90%] my-5 border-gray-800 lg:mx-auto"
               initial={{ x: 80, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}

@@ -27,6 +27,23 @@
   .font-inter {
     font-family: var(--font-inter);
   }
+
+  .font-dynalight {
+    font-family: var(--font-dynalight);
+  }
+
+  .font-windsong {
+    font-family: var(--font-windsong);
+  }
+}
+
+.b-style {
+  .text {
+    &.B {
+      color: red;
+      font-weight: bold;
+    }
+  }
 }
 
 @keyframes shine {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Playfair_Display, Inter } from "next/font/google";
+import { Poppins, Playfair_Display, Inter, Dynalight, WindSong } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -19,6 +19,18 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const dynalight = Dynalight({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-dynalight",
+});
+
+const windsong = WindSong({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-windsong",
+});
+
 export const metadata: Metadata = {
   title: "Studio Cirqueira’s | Design de Sobrancelhas, Lash e Nail Designer",
   description:
@@ -36,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${poppins.variable} ${playfair.variable} ${inter.variable} antialiased`}
+        className={`${poppins.variable} ${playfair.variable} ${inter.variable} ${dynalight.variable} ${windsong.variable} antialiased`}
       >
         {children}
       </body>

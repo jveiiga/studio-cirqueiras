@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <div className="">
-      <Header />
+      <Header image="/images/logo_studio.png"/>
       <main>
         <section
           className="bg-[#fdecda]"
