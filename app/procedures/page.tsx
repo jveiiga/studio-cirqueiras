@@ -105,7 +105,7 @@ export default function Procedures() {
           </div>
 
           {/* Overlay de gradiente — MOBILE ORIGINAL */}
-          <div
+          {/* <div
             className="
         pointer-events-none
         absolute inset-0 z-10
@@ -113,7 +113,8 @@ export default function Procedures() {
         from-black/40 via-[#fdecda]/50 to-[#fdecda]
         sm:hidden
       "
-          />
+          /> */}
+          <div className="pointer-events-none absolute bottom-0 left-0 w-full h-126 bg-gradient-to-b from-transparent to-[#fdecda]" />
 
           {/* Overlay de gradiente — DESKTOP */}
           <div

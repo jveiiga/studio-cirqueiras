@@ -152,8 +152,21 @@ export default function Academy() {
               </span>
             </button>
           </div>
+          <div className="pointer-events-none absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[#F5EEE4]" />
         </motion.div>
       </section>
+      <div className="relative w-full leading-none -mt-[1px]">
+        <svg
+          viewBox="0 0 1440 100"
+          preserveAspectRatio="none"
+          className="w-full h-[250px]"
+        >
+          <path
+            fill="#F5EEE4"
+            d="M0,40 C240,80 480,0 720,20 960,40 1200,80 1440,40 L1440,0 L0,0 Z"
+          />
+        </svg>
+      </div>
 
       <section>
         <p className="flex flex-col text-center mt-10">
@@ -299,6 +312,96 @@ export default function Academy() {
             </li>
           </ul>
         </div>
+      </section>
+      <div className="my-10 mx-[5%]">
+        <motion.p
+          className="text-sm lg:ml-[5%] uppercase text-gray-800"
+          initial={{ x: -80, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+          viewport={{ once: true }}
+        >
+          O que estamos preparando
+        </motion.p>
+
+        <motion.hr
+          className="w-[90%] my-5 border-gray-800 lg:mx-auto border-t-1 lg:mt-10"
+          initial={{ x: 80, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+        />
+      </div>
+      <section className="w-full flex justify-center py-10 bg-[#fdecda]">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="w-full max-w-xl text-center px-6"
+        >
+  
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-3xl font-semibold mb-4 font-poppins"
+          >
+            As vagas não abrem para todos.
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.35 }}
+            className="text-md mb-10"
+          >
+            Entre na lista prioritária e seja avisada antes do público geral.
+          </motion.p>
+
+     
+          <motion.form
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="flex flex-col gap-4"
+          >
+            <input
+              type="text"
+              placeholder="Seu nome"
+              className="w-full px-4 py-3 border focus:outline-none focus:ring-2 focus:ring-black"
+            />
+
+            <input
+              type="text"
+              placeholder="WhatsApp"
+              className="w-full px-4 py-3 border focus:outline-none focus:ring-2 focus:ring-black"
+            />
+
+<input
+              type="text"
+              placeholder="E-mail"
+              className="w-full px-4 py-3 border focus:outline-none focus:ring-2 focus:ring-black"
+            />
+
+            <motion.button
+              whileHover={{ scale: 1.04 }}
+              animate={{ scale: [1, 1.03, 1] }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="mt-4 bg-black text-white py-3 font-medium"
+            >
+              Quero prioridade
+            </motion.button>
+
+            <p className="text-sm text-gray-600 mt-2">
+              Seja avisada primeiro quando as vagas abrirem
+            </p>
+          </motion.form>
+        </motion.div>
       </section>
       <Footer />
     </div>
