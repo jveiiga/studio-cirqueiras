@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="text-md lg:mt-15 bg-[#4c2a12] text-white p-6">
+        <footer className="text-md lg:pt-15 bg-[#4c2a12] text-white p-6">
             <div className=" flex flex-col justify-around align-center mt-15 lg:flex-row">
 
                 <div className="w-full max-w-[600px]">
@@ -34,7 +34,7 @@ export default function Footer() {
                             className="mt-4"
                         />
                         <div className="flex flex-start">
-                            <p>© 2026 Studio Cirqueira's. Todos os direitos reservados.</p>
+                            <p>© 2026 Studio Cirqueira&apos;s. Todos os direitos reservados.</p>
                         </div>
                         <div className="flex flex-start items-center">
                             <p>Desenvolvido por:</p>
@@ -64,7 +64,7 @@ export default function Footer() {
                             className="mt-4"
                         />
                         <div className="flex flex-start text-sm">
-                            <p>© 2026 Studio Cirqueira's. Todos os direitos reservados.</p>
+                            <p>© 2026 Studio Cirqueira&apos;s. Todos os direitos reservados.</p>
                         </div>
                         <div className="flex flex-start items-center mt-4">
                             <p>Desenvolvido por:</p>

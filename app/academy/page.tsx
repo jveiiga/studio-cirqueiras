@@ -368,7 +368,7 @@ export default function Academy() {
           <h2 className="text-3xl lg:text-5xl text-center font-poppins mb-15">
             <span>Método </span>
             <br className="lg:hidden" />
-            <span className="font-bold">Cirqueira's</span>
+            <span className="font-bold">Cirqueira&apos;s</span>
           </h2>
 
           <ul className="mt-2 mb-10 space-y-2 text-sm px-10 lg:px-0 lg:text-lg">
@@ -453,7 +453,7 @@ export default function Academy() {
         </p>
 
         <p className="text-base font-light leading-loose text-black-300 max-w-2xl mb-14">
-          No Studio Cirqueira's, a gente acredita em outra coisa. Educação de
+          No Studio Cirqueira&apos;s, a gente acredita em outra coisa. Educação de
           verdade é aquela que forma a mão, forma o olhar e forma a mente. É
           integrada. É sistêmica. É sem limites e sem barreiras entre o que você
           sabe fazer e o que você pode construir.
@@ -464,7 +464,7 @@ export default function Academy() {
         </h3>
 
         <p className="text-sm font-light leading-loose text-black-400 max-w-2xl pl-5 mb-6">
-          Aqui no Studio Cirqueira's, a gente não forma só profissionais que
+          Aqui no Studio Cirqueira&apos;s, a gente não forma só profissionais que
           sabem fazer bonito. A gente forma{" "}
           <strong className="text-black-100 font-bold">
             empreendedoras visionárias

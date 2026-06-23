@@ -71,7 +71,7 @@ export default function Home() {
           <div className="flex-col mx-[5%] sm:flex-col sm:items-start sm:mx-10 md:items-center lg:justify-around lg:items-center xl:justify-around xl:items-center flex">
             <h1 className="text-2xl sm:text-4xl md:text-5xl xl:text-6xl text-black mb-10">
               <span>Conheça o </span>
-              <span className="text-[#c9964d]">Studio Cirqueira's</span>
+              <span className="text-[#c9964d]">Studio Cirqueira&apos;s</span>
             </h1>
             <p className="text-sm max-w-[500px] mb-15 sm:text-sm md:text-md md:max-w-[650px] lg:text-lg lg:max-w-[800px] lg:text-center xl:text-lg xl:max-w-[800px]">
               No nosso studio, o foco está em cuidados bem executados, com atenção aos detalhes e respeito à sua individualidade, para realçar o que há de melhor em você.
@@ -142,7 +142,7 @@ export default function Home() {
                     <span className="font-poppins mt-5 text-[#bc743a]">Onde </span>
                     <span className="font-poppins mt-5 text-[#4c2a12]">nasce o</span>
                   </p>
-                  <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl lg:w-full xl:text-6xl font-poppins">Studio Cirqueira's</h2>
+                  <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl lg:w-full xl:text-6xl font-poppins">Studio Cirqueira&apos;s</h2>
                   <p className="mt-5 text-sm sm:mt-10 md:text-md md:max-w-[400px] lg:text-lg lg:max-w-[400px] lg:mt-15 xl:text-lg xl:mt-25 lg:leading-loose">O studio nasceu da vontade de impactar pessoas de forma real, defendendo a liberdade de ser quem se é e valorizando a beleza sem imposições.</p>
                   <button className="my-10 sm:my-10 md:mb-10 md:mt-20 relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] leading-[50px] text-black text-sm transition-all duration-300 group">
                     <span className="absolute inset-0 bg-[#4c2a12]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>

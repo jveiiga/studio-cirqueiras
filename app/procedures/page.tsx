@@ -99,7 +99,7 @@ export default function Procedures() {
               alt="Procedimentos"
               fill
               sizes="(min-width: 640px) 50vw, 100vw"
-              className="object-cover"
+              className="object-cover object-center"
               priority
             />
           </div>
