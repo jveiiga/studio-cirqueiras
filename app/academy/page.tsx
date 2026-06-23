@@ -351,7 +351,7 @@ export default function Academy() {
       </div>
 
       <div className="flex">
-        <div className="pt-40 pl-[10%] w-[400px] flex-shrink-0">
+        <div className="pt-40 pl-[10%] w-[400px] flex-shrink-0 hidden lg:block">
           <p className="text-3xl">Isso que nos move.</p>
           <p className="font-poppins text-3xl font-bold text-[#4c2a12]">Porque sabemos que estamos no caminho certo.</p>
         </div>
