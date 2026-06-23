@@ -12,7 +12,7 @@ export default function ClinicaPage() {
     <>
       <Header image="/images/logo_studio.png" />
       <main className="font-inter text-[#4C2A12] bg-[#FDECDA]">
-        <section className="relative h-[90vh] w-full flex items-center px-3 lg:px-20">
+        <section className="relative h-[80vh] w-full flex items-center px-3 lg:px-20">
           <Image
             src="/images/std-cirqueiras.png"
             alt=""
