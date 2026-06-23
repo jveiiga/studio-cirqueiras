@@ -1,5 +1,8 @@
+"use client";
+
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const imageUrl = "/images/banner-contact.png";
@@ -8,18 +11,20 @@ export default function Contact() {
       <section className="bg-[#FDECDA]">
         <Header image="/images/logo_studio.png" />
         <section
-          className="relative flex h-[80vh] flex-col items-center justify-center bg-stretch bg-center bg-no-repeat p-8 text-white"
-          style={{
-            backgroundImage: `url(${imageUrl})`,
-            backgroundSize: "cover",
-          }}
-        ></section>
+  className="relative flex min-h-[700px] lg:h-[80vh] flex-col items-center justify-center bg-cover bg-center bg-no-repeat p-8 text-white"
+  style={{
+    backgroundImage: `url(${imageUrl})`,
+    backgroundPosition: "30% 50%",
+  }}
+>
+
+        </section>
 
         <section className="relative overflow-hidden bg-white">
           {/* <div className="absolute inset-0 bg-gradient-to-r from-[#4C2A12]/90 to-[#BC743A]/70" /> */}
           <div className="absolute bg-white" />
 
-          <div className="relative max-w-7xl mx-auto px-16 b-130 lg:px-10 py-24 lg:py-32 grid lg:grid-cols-2 gap-14 items-center">
+          <div className="relative max-w-7xl mx-auto px-5 lg:px-16 b-130 lg:px-10 py-24 lg:py-32 grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <span className="font-dynalight text-[#C9964D] text-4xl md:text-5xl">
                 Studio Cirqueira&apos;s
@@ -62,7 +67,7 @@ export default function Contact() {
         </section>
 
         {/* SOBRE */}
-        <section className="py-24">
+        <section className="mt-30 lg:py-24">
           <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-20 items-center">
             <div>
               <span className="font-dynalight text-[#BC743A] text-4xl">
@@ -176,37 +181,46 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="bg-[#FDECDA] p-10">
+            <div className="bg-[#FDECDA] p-5 lg:p-10">
               <div className="space-y-5">
                 <input
                   type="text"
                   placeholder="Nome"
-                  className="w-full h-14 px-6 border border-[#C9964D]/30 outline-none bg-white"
+                  className="w-full h-14 px-6 border border-black outline-none"
                 />
 
                 <input
                   type="email"
                   placeholder="E-mail"
-                  className="w-full h-14 px-6 border border-[#C9964D]/30 outline-none bg-white"
+                  className="w-full h-14 px-6 border border-black outline-none"
                 />
 
                 <input
                   type="tel"
                   placeholder="Telefone"
-                  className="w-full h-14 px-6 border border-[#C9964D]/30 outline-none bg-white"
+                  className="w-full h-14 px-6 border border-black outline-none"
                 />
 
-                <select className="w-full h-14 px-6 border border-[#C9964D]/30 bg-white outline-none">
+                <select className="w-full h-14 px-6 border border-black outline-none">
                   <option>Serviço de interesse</option>
                   <option>Unhas</option>
                   <option>Sobrancelha</option>
                   <option>Cilíos</option>
-                  <option>Limpeza de Pele</option>
+                  <option>Limpeza</option>
                 </select>
 
-                <button className="w-full h-14 bg-[#4C2A12] hover:bg-[#3a1f0d] text-white font-poppins transition">
+                <motion.button
+                  whileHover={{ scale: 1.04 }}
+                  animate={{ scale: [1, 1.03, 1] }}
+                  transition={{
+                    duration: 2.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="w-full mt-4 bg-black text-white py-3 font-medium"
+                >
                   Agendar atendimento
-                </button>
+                </motion.button>
               </div>
             </div>
           </div>
