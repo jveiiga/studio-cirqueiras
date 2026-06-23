@@ -31,7 +31,7 @@ export default function StudioCarousel() {
         <SwiperSlide className="flex justify-center">
           <div className="relative h-[200px] w-[90%] sm:w-[90%] sm:h-[250px] sm:mx-auto lg:mx-auto lg:max-w-[450px] xl:w-full rounded-2xl overflow-hidden">
             <Image
-              src="/images/quel-1.jpg"
+              src=""
               alt=""
               fill
               className="object-cover"
@@ -42,7 +42,7 @@ export default function StudioCarousel() {
         <SwiperSlide className="flex justify-center">
           <div className="relative h-[200px] w-[90%] sm:w-[90%] sm:h-[250px] sm:mx-auto lg:mx-auto lg:max-w-[450px] xl:w-full rounded-2xl overflow-hidden">
             <Image
-              src="/images/quel-2.jpg"
+              src=""
               alt=""
               fill
               className="object-cover"
@@ -53,7 +53,7 @@ export default function StudioCarousel() {
         <SwiperSlide className="flex justify-center">
           <div className="relative h-[200px] w-[90%] sm:w-[90%] sm:h-[250px] sm:mx-auto lg:mx-auto lg:max-w-[450px] xl:w-full rounded-2xl overflow-hidden">
             <Image
-              src="/images/quel-3.jpg"
+              src=""
               alt=""
               fill
               className="object-cover"
@@ -64,7 +64,7 @@ export default function StudioCarousel() {
         <SwiperSlide className="flex justify-center">
           <div className="relative h-[200px] w-[90%] sm:w-[90%] sm:h-[250px] sm:mx-auto lg:mx-auto lg:max-w-[450px] xl:w-full rounded-2xl overflow-hidden">
             <Image
-              src="/images/quel-4.jpg"
+              src=""
               alt=""
               fill
               className="object-cover"
@@ -75,7 +75,7 @@ export default function StudioCarousel() {
         <SwiperSlide className="flex justify-center">
           <div className="relative h-[200px] w-[90%] sm:w-[90%] sm:h-[250px] sm:mx-auto lg:mx-auto lg:max-w-[450px] xl:w-full rounded-2xl overflow-hidden">
             <Image
-              src="/images/quel-5.jpeg"
+              src=""
               alt=""
               fill
               className="object-cover"
@@ -86,7 +86,7 @@ export default function StudioCarousel() {
         <SwiperSlide className="flex justify-center">
           <div className="relative h-[200px] w-[90%] sm:w-[90%] sm:h-[250px] sm:mx-auto lg:mx-auto lg:max-w-[450px] xl:w-full rounded-2xl overflow-hidden">
             <Image
-              src="/images/quel-2.jpg"
+              src=""
               alt=""
               fill
               className="object-cover"

@@ -11,14 +11,12 @@ export default function Contact() {
       <section className="bg-[#FDECDA]">
         <Header image="/images/logo_studio.png" />
         <section
-  className="relative flex min-h-[700px] lg:h-[80vh] flex-col items-center justify-center bg-cover bg-center bg-no-repeat p-8 text-white"
-  style={{
-    backgroundImage: `url(${imageUrl})`,
-    backgroundPosition: "30% 50%",
-  }}
->
-
-        </section>
+          className="relative flex min-h-[700px] lg:h-[80vh] flex-col items-center justify-center bg-cover bg-center bg-no-repeat p-8 text-white"
+          style={{
+            backgroundImage: `url(${imageUrl})`,
+            backgroundPosition: "30% 50%",
+          }}
+        ></section>
 
         <section className="relative overflow-hidden bg-white">
           {/* <div className="absolute inset-0 bg-gradient-to-r from-[#4C2A12]/90 to-[#BC743A]/70" /> */}
@@ -90,21 +88,23 @@ export default function Contact() {
                 natural, fortalecem a autoestima e criam experiências
                 memoráveis.
               </p>
-              <button
-                type="button"
-                className="mt-5 relative overflow-hidden w-[300] h-[50] lg:h-[50px]
-                              text-md text-[#BC743A] border-2 border-[#BC743A]
-                              transition-all duration-300
-                              after:content-[''] after:absolute after:top-0 after:left-0
-                              after:w-0 after:h-full after:bg-[#BC743A]
-                              after:transition-all after:duration-300
-                              hover:text-white hover:border-[#BC743A] hover:after:w-full
-                              group cursor-pointer"
+              <a
+                href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-5 relative overflow-hidden w-[300px] h-[50px]
+             text-md text-[#BC743A] border-2 border-[#BC743A]
+             transition-all duration-300
+             after:content-[''] after:absolute after:top-0 after:left-0
+             after:w-0 after:h-full after:bg-[#BC743A]
+             after:transition-all after:duration-300
+             hover:text-white hover:border-[#BC743A] hover:after:w-full
+             group cursor-pointer flex items-center justify-center"
               >
                 <span className="relative whitespace-nowrap z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full">
                   Fale com uma de nós
                 </span>
-              </button>
+              </a>
             </div>
 
             <div>

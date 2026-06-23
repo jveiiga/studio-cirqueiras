@@ -21,8 +21,8 @@ export default function CardSlider3() {
           640: { slidesPerView: 1 },
           768: { slidesPerView: 1 },
           1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 3 },
-          1536: { slidesPerView: 4 },
+          1280: { slidesPerView: 2 },
+          1536: { slidesPerView: 3 },
         }}
       >
         <SwiperSlide className="flex justify-center overflow-hidden">

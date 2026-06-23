@@ -43,7 +43,7 @@ export default function ClinicaPage() {
         </section>
 
         {/* CLINICA INTRO */}
-        <section className="py-16 text-center px-6">
+        <section className="lg:py-16 text-center px-6">
           <h2 className="font-poppins text-3xl text-[#BC743A] lg:text-5xl my-15">
             Nosso Stúdio
           </h2>
@@ -57,7 +57,7 @@ export default function ClinicaPage() {
           <CardSlider1 />
         </section>
         <motion.hr
-          className="w-[90%] mx-auto border-t-1 border-gray-400 my-20"
+          className="w-[90%] mx-auto border-t-1 border-gray-400 mt-20 lg:my-20"
           initial={{ x: 80, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -79,18 +79,30 @@ export default function ClinicaPage() {
             />
 
             <div className="absolute inset-0 bg-[#BC743A]/60 flex flex-col justify-center items-start pl-3 lg:p-8 text-white">
-              <h3 className="text-3xl lg:text-4xl font-poppins mb-20">São Paulo - SP</h3>
+              <h3 className="text-3xl lg:text-4xl font-poppins mb-20">
+                São Paulo - SP
+              </h3>
 
               <div className="flex gap-3 mb-10 bor">
-                <button className="bg-[#25D366] text-white font-bold px-5 py-2 lg:px-10 lg:py-3 rounded-3xl text-sm flex items-center gap-2">
+                <a
+                  className="bg-[#25D366] text-white font-bold px-5 py-2 lg:px-10 lg:py-3 rounded-3xl text-sm flex items-center gap-2 cursor-pointer"
+                  href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaWhatsapp />
                   WhatsApp
-                </button>
+                </a>
 
-                <button className="bg-[#E1306C] text-white font-bold px-5 py-2 lg:px-10 lg:py-3 rounded-3xl text-sm flex items-center gap-2">
+                <a
+                  className="bg-[#E1306C] text-white font-bold px-5 py-2 lg:px-10 lg:py-3 rounded-3xl text-sm flex items-center gap-2"
+                  href="https://www.instagram.com/studio.cirqueiras/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaInstagram />
                   Instagram
-                </button>
+                </a>
               </div>
 
               <p className="flex items-center gap-2">

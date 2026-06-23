@@ -243,7 +243,7 @@ export default function Academy() {
             />
           </div>
 
-          <p className="text-[#4C2A12] text-center text-4xl font-windsong mb-10">
+          <p className="text-[#4C2A12] text-center text-4xl lg:text-5xl font-windsong mb-10">
             Uma jornada que te guiara
           </p>
 
@@ -350,9 +350,16 @@ export default function Academy() {
         />
       </div>
 
-      <section>
-        <CardSlider3 />
-      </section>
+      <div className="flex">
+        <div className="pt-40 pl-[10%] w-[400px] flex-shrink-0">
+          <p className="text-3xl">Isso que nos move.</p>
+          <p className="font-poppins text-3xl font-bold text-[#4c2a12]">Porque sabemos que estamos no caminho certo.</p>
+        </div>
+
+        <div className="flex-1 min-w-0">
+          <CardSlider3 />
+        </div>
+      </div>
 
       <section className="w-full max-w-[500px] lg:max-w-4xl mx-auto lg:flex lg:flex-col lg:items-center lg:gap-16 lg:px-10 lg:py-16">
         <div className="relative w-full h-[400px] lg:h-[500px]">
@@ -392,10 +399,10 @@ export default function Academy() {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-[#f5e9ea]">
+      <section className="py-16 px-4 bg-[#BC743A]">
         <div className="max-w-xl mx-auto text-center">
-          <p className="text-sm text-gray-500">😉</p>
-          <h2 className="text-3xl font-bold text-[#b07a7f] mt-2">
+          <p className="text-sm text-gray-500">🙂 </p>
+          <h2 className="text-3xl font-bold text-[#FDECDA] mt-2">
             Perguntas frequentes
           </h2>
         </div>
@@ -405,8 +412,8 @@ export default function Academy() {
             onClick={() => setActiveIndex(activeIndex === 0 ? null : 0)}
             className={`w-full text-left px-5 py-4 rounded-full border-2 transition ${
               activeIndex === 0
-                ? "bg-[#c9898f] border-yellow-400 text-white"
-                : "bg-white border-[#e5c9cc] text-gray-700"
+                ? "bg-[#c9964d] border-[#fdecda] text-white"
+                : "bg-[#fdecda] border-[#c9964d] text-gray-700"
             }`}
           >
             <div className="flex justify-between items-center">
@@ -416,7 +423,7 @@ export default function Academy() {
           </button>
 
           {activeIndex === 0 && (
-            <div className="p-6 rounded-2xl border border-[#d9a5a8] bg-[#f2e6e7] text-gray-800 leading-relaxed">
+            <div className="p-6 rounded-2xl border border-[#c9964d] bg-[#fdecda] text-gray-800 leading-relaxed">
               Você vai fazer parte do nosso ecossistema. Te guiamos para
               alcançar o próximo nível da sua carreira, oferecendo uma formação
               completa para você se posicionar com autoridade no mercado de nail
@@ -427,45 +434,92 @@ export default function Academy() {
             </div>
           )}
         </div>
+
+        <div className="max-w-xl mx-auto mt-8 space-y-4">
+          <button
+            onClick={() => setActiveIndex(activeIndex === 1 ? null : 1)}
+            className={`w-full text-left px-5 py-4 rounded-full border-2 transition ${
+              activeIndex === 1
+                ? "bg-[#c9964d] border-[#fdecda] text-white"
+                : "bg-[#fdecda] border-[#c9964d] text-gray-700"
+            }`}
+          >
+            <div className="flex justify-between items-center">
+              <span>Preciso ter experiência para começar?</span>
+              <span>{activeIndex === 1 ? "—" : "+"}</span>
+            </div>
+          </button>
+
+          {activeIndex === 1 && (
+            <div className="p-6 rounded-2xl border border-[#c9964d] bg-[#fdecda] text-gray-800 leading-relaxed">
+              Não. O método foi desenvolvido para iniciantes e também para
+              profissionais que desejam se aperfeiçoar e aumentar seus
+              resultados no mercado.
+            </div>
+          )}
+        </div>
+
+        <div className="max-w-xl mx-auto mt-8 space-y-4">
+          <button
+            onClick={() => setActiveIndex(activeIndex === 2 ? null : 2)}
+            className={`w-full text-left px-5 py-4 rounded-full border-2 transition ${
+              activeIndex === 2
+                ? "bg-[#c9964d] border-[#fdecda] text-white"
+                : "bg-[#fdecda] border-[#c9964d] text-gray-700"
+            }`}
+          >
+            <div className="flex justify-between items-center">
+              <span>Em quanto tempo posso começar a ter resultados?</span>
+              <span>{activeIndex === 2 ? "—" : "+"}</span>
+            </div>
+          </button>
+
+          {activeIndex === 2 && (
+            <div className="p-6 rounded-2xl border border-[#c9964d] bg-[#fdecda] text-gray-800 leading-relaxed">
+              Seguindo o método corretamente, muitos alunos já conseguem iniciar
+              atendimentos e gerar renda nos primeiros meses.
+            </div>
+          )}
+        </div>
       </section>
 
       <section className="max-w-4xl mx-auto px-8 py-20">
-        <Image
-          src=""
-          alt="Studio Cirqueira's — nossa missão"
-          className="w-full aspect-video object-cover rounded mb-14"
-        />
+        <div className="lg:flex">
+          <Image
+            src=""
+            alt="Studio Cirqueira's — nossa missão"
+            className="w-full aspect-video object-cover rounded mb-14 border-1 border-black/20 lg:mr-20"
+          />
+          <div className="lg:flex lg:flex-col">
+            <span className="text-xs lg:text-sm font-medium tracking-widest uppercase text-[#bc743a]">
+              Nossa missão
+            </span>
+            <h2 className="font-serif text-4xl md:text-5xl font-normal leading-tight text-black-100 mt-5 mb-7 max-w-2xl">
+              Existe um jeito novo de fazer{" "}
+              <em className="italic text-[#bc743a]">beleza acontecer.</em>
+            </h2>
+            <p className="text-base font-light leading-loose text-black-300 max-w-2xl mb-6">
+              E ele já chegou. Por muito tempo, aprender beleza significou
+              aprender apenas técnica: repetir movimentos, copiar resultados,
+              seguir um manual. Mas o mercado mudou. As clientes mudaram. E quem
+              ainda pensa só em técnica, fica para trás.
+            </p>
+            <p className="text-base font-light leading-loose text-black-300 max-w-2xl mb-14">
+              No Studio Cirqueira&apos;s, a gente acredita em outra coisa.
+              Educação de verdade é aquela que forma a mão, forma o olhar e
+              forma a mente. É integrada. É sistêmica. É sem limites e sem
+              barreiras entre o que você sabe fazer e o que você pode construir.
+            </p>
+          </div>
+        </div>
 
-        <span className="text-xs font-medium tracking-widest uppercase text-amber-600">
-          Nossa missão
-        </span>
-
-        <h2 className="font-serif text-4xl md:text-5xl font-normal leading-tight text-black-100 mt-5 mb-7 max-w-2xl">
-          Existe um jeito novo de fazer{" "}
-          <em className="italic text-amber-600">beleza acontecer.</em>
-        </h2>
-
-        <p className="text-base font-light leading-loose text-black-300 max-w-2xl mb-6">
-          E ele já chegou. Por muito tempo, aprender beleza significou aprender
-          apenas técnica: repetir movimentos, copiar resultados, seguir um
-          manual. Mas o mercado mudou. As clientes mudaram. E quem ainda pensa
-          só em técnica, fica para trás.
-        </p>
-
-        <p className="text-base font-light leading-loose text-black-300 max-w-2xl mb-14">
-          No Studio Cirqueira&apos;s, a gente acredita em outra coisa. Educação de
-          verdade é aquela que forma a mão, forma o olhar e forma a mente. É
-          integrada. É sistêmica. É sem limites e sem barreiras entre o que você
-          sabe fazer e o que você pode construir.
-        </p>
-
-        <h3 className="font-serif text-2xl md:text-3xl italic font-bold text-black-100 border-l-2 border-amber-600 pl-5 mb-5">
+        <h3 className="font-serif text-2xl md:text-3xl italic font-bold text-black-100 border-l-2 border-[#bc743a] pl-5 mb-5">
           O sucesso não é sorte. Não é dom. É decisão.
         </h3>
 
-        <p className="text-sm font-light leading-loose text-black-400 max-w-2xl pl-5 mb-6">
-          Aqui no Studio Cirqueira&apos;s, a gente não forma só profissionais que
-          sabem fazer bonito. A gente forma{" "}
+        <p className="text-sm lg:text-base font-light leading-loose text-black-400 max-w-2xl pl-5 mb-6">
+          Aqui no Studio Cirqueira&apos;s, a gente não forma só profissionais
+          que sabem fazer bonito. A gente forma{" "}
           <strong className="text-black-100 font-bold">
             empreendedoras visionárias
           </strong>
@@ -474,7 +528,7 @@ export default function Academy() {
           constroem marca, que atraem cliente certo e cobram o que valem.
         </p>
 
-        <p className="text-sm font-light leading-loose text-black-400 max-w-2xl pl-5 mb-6">
+        <p className="text-sm lg:text-base font-light leading-loose text-black-400 max-w-2xl pl-5 mb-6">
           Você vai aprender a{" "}
           <strong className="text-black-100 font-bold">
             viver a beleza como negócio, como arte e como legado
@@ -485,7 +539,7 @@ export default function Academy() {
           inspira.
         </p>
 
-        <p className="text-sm font-light leading-loose text-black-400 max-w-2xl pl-5">
+        <p className="text-sm lg:text-base font-light leading-loose text-black-400 max-w-2xl pl-5">
           Sem fórmula mágica. Sem atalho. Sem promessa vazia. Aqui é
           conhecimento aplicado, prática de verdade e resultado que você enxerga
           e sente, na sua mão, no seu bolso e na sua nova versão profissional.
