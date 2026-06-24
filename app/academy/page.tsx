@@ -390,7 +390,7 @@ export default function Academy() {
             className="object-contain rounded-2xl"
           />
         </div>
-          <h2 className="text-3xl lg:text-5xl text-center text-black font-poppins mt-30 mb-15">
+          <h2 className="text-3xl lg:text-5xl text-center text-black font-poppins lg:mt-30 mb-15">
             <span>Método </span>
             <br className="lg:hidden" />
             <span className="font-bold">Cirqueira&apos;s</span>
