@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function CardSlider3() {
   return (
-    <div className="max-w-[1800px] mx-auto mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="h-full max-w-[1800px] mx-auto mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={10}
@@ -25,8 +25,8 @@ export default function CardSlider3() {
           1536: { slidesPerView: 3 },
         }}
       >
-        <SwiperSlide className="flex justify-center overflow-hidden">
-          <div className="relative h-[500px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] rounded-2xl overflow-hidden">
+        <SwiperSlide className="flex justify-center items-center">
+          <div className="relative w-full max-w-[320px] h-[500px] sm:max-w-[370px] sm:h-[800px] rounded-2xl overflow-hidden mx-auto">
             <Image
               src="/images/depoimento-1.png"
               alt="Mega Fox"
@@ -37,8 +37,8 @@ export default function CardSlider3() {
             {/* <div className="absolute inset-0 bg-gradient-to-b from-[#45B1C1]/30 to-transparent" /> */}
           </div>
         </SwiperSlide>
-        <SwiperSlide className="flex justify-center">
-          <div className="relative h-[500px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full rounded-2xl overflow-hidden">
+        <SwiperSlide className="flex justify-center items-center">
+          <div className="relative w-full max-w-[320px] h-[500px] sm:max-w-[370px] sm:h-[800px] rounded-2xl overflow-hidden mx-auto">
             <Image
               src="/images/depoimento-2.png"
               alt="Brow Lamination"
@@ -48,8 +48,8 @@ export default function CardSlider3() {
             {/* <div className="absolute inset-0 flex items-end pl-2 py-10 bg-gradient-to-b from-[#54c18c]/30"></div> */}
           </div>
         </SwiperSlide>
-        <SwiperSlide className="flex justify-center">
-          <div className="relative h-[500px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full rounded-2xl overflow-hidden">
+        <SwiperSlide className="flex justify-center items-center">
+          <div className="relative w-full max-w-[320px] h-[500px] sm:max-w-[370px] sm:h-[800px] rounded-2xl overflow-hidden mx-auto">
             <Image
               src="/images/depoimento-3.png"
               alt="Design com Henna"
@@ -60,7 +60,7 @@ export default function CardSlider3() {
           </div>
         </SwiperSlide>
 
-        {/* <SwiperSlide className="flex justify-center">
+        {/* <SwiperSlide className="flex justify-center items-center">
           <div className="relative h-[500px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full rounded-2xl overflow-hidden">
             <Image
               src="/images/depoimento-4.png"
@@ -77,8 +77,8 @@ export default function CardSlider3() {
           </div>
         </SwiperSlide> */}
 
-        <SwiperSlide className="flex justify-center">
-          <div className="relative h-[500px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full rounded-2xl overflow-hidden">
+        <SwiperSlide className="flex justify-center items-center">
+          <div className="relative w-full max-w-[320px] h-[500px] sm:max-w-[370px] sm:h-[800px] rounded-2xl overflow-hidden mx-auto">
             <Image
               src="/images/depoimento-5.png"
               alt="Lash Lifiting"
@@ -88,8 +88,8 @@ export default function CardSlider3() {
             {/* <div className="absolute inset-0 flex items-end pl-2 py-10 bg-gradient-to-b from-[#d58ed7]/30 to-transparent"></div> */}
           </div>
         </SwiperSlide>
-        <SwiperSlide className="flex justify-center">
-          <div className="relative h-[500px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full rounded-2xl overflow-hidden">
+        <SwiperSlide className="flex justify-center items-center">
+          <div className="relative w-full max-w-[320px] h-[500px] sm:max-w-[370px] sm:h-[800px] rounded-2xl overflow-hidden mx-auto">
             <Image
               src="/images/depoimento-6.png"
               alt="Mega Fox"
@@ -99,8 +99,8 @@ export default function CardSlider3() {
             {/* <div className="absolute inset-0 flex items-end pl-2 py-10 bg-gradient-to-b from-[#e08591]/30"></div> */}
           </div>
         </SwiperSlide>
-        <SwiperSlide className="flex justify-center">
-          <div className="relative h-[500px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full rounded-2xl overflow-hidden">
+        <SwiperSlide className="flex justify-center items-center">
+          <div className="relative w-full max-w-[320px] h-[500px] sm:max-w-[370px] sm:h-[800px] rounded-2xl overflow-hidden mx-auto">
             <Image
               src="/images/depoimento-7.png"
               alt="Nail Art"
@@ -110,7 +110,7 @@ export default function CardSlider3() {
             {/* <div className="absolute inset-0 flex items-end pl-2 py-10 bg-gradient-to-b from-[#4c2a12]/30"></div> */}
           </div>
         </SwiperSlide>
-        {/* <SwiperSlide className="flex justify-center">
+        {/* <SwiperSlide className="flex justify-center items-center">
           <div className="relative h-[500px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full rounded-2xl overflow-hidden">
             <Image
               src="/images/depoimento-8.png"

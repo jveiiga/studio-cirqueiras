@@ -331,37 +331,57 @@ export default function Academy() {
         <CardSlider2 />
       </section>
 
-      <div className="my-10 mx-[5%]">
-        <motion.p
-          className="text-sm lg:ml-[5%] uppercase text-gray-800"
-          initial={{ x: 80, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
-          viewport={{ once: true }}
-        >
-          O que nossos alunos dizem
-        </motion.p>
-        <motion.hr
-          className="w-[90%] my-5 border-gray-800 lg:mx-auto border-t-1 lg:mt-10"
-          initial={{ x: 80, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true }}
-        />
-      </div>
-
-      <div className="flex">
-        <div className="pt-40 pl-[10%] w-[400px] flex-shrink-0 hidden lg:block">
-          <p className="text-3xl">Isso que nos move.</p>
-          <p className="font-poppins text-3xl font-bold text-[#4c2a12]">Porque sabemos que estamos no caminho certo.</p>
+      <section>
+        <div className="my-10 mx-[5%]">
+          <motion.p
+            className="text-sm lg:ml-[5%] uppercase text-gray-800"
+            initial={{ x: 80, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            O que nossos alunos dizem
+          </motion.p>
+          <motion.hr
+            className="w-[90%] my-5 border-gray-800 lg:mx-auto border-t-1 lg:mt-10"
+            initial={{ x: 80, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+          />
         </div>
-
-        <div className="flex-1 min-w-0">
-          <CardSlider3 />
+        <div className="flex">
+          <div className="pt-40 pl-[10%] w-[400px] flex-shrink-0 hidden lg:block">
+            <p className="text-3xl">Isso que nos move.</p>
+            <p className="font-poppins text-3xl font-bold text-[#4c2a12]">
+              Porque sabemos que estamos no caminho certo.
+            </p>
+          </div>
+          <div className="flex-1 min-w-0">
+            <CardSlider3 />
+          </div>
         </div>
-      </div>
+      </section>
 
-      <section className="w-full max-w-[500px] lg:max-w-4xl mx-auto lg:flex lg:flex-col lg:items-center lg:gap-16 lg:px-10 lg:py-16">
+      <section
+        className="
+        relative
+        w-full
+        mx-auto
+        lg:flex
+        lg:flex-col
+        lg:items-center
+        lg:gap-16
+        lg:px-10
+        lg:py-16
+        overflow-hidden
+      "
+      >
+        <div className="absolute inset-0 bg-[url('/images/banner-beauty&academy.png')] bg-cover bg-center bg-no-repeat z-0" />
+        {/* Gradiente por cima da imagem */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white to-[#BC743A]/5 z-10" />
+
+        <div className="relative lg:flex-1 z-20">
         <div className="relative w-full h-[400px] lg:h-[500px]">
           <Image
             src="/images/nosso_jeito_cirqueiras.png"
@@ -370,9 +390,7 @@ export default function Academy() {
             className="object-contain rounded-2xl"
           />
         </div>
-
-        <div className="lg:flex-1">
-          <h2 className="text-3xl lg:text-5xl text-center font-poppins mb-15">
+          <h2 className="text-3xl lg:text-5xl text-center text-black font-poppins mt-30 mb-15">
             <span>Método </span>
             <br className="lg:hidden" />
             <span className="font-bold">Cirqueira&apos;s</span>
@@ -399,7 +417,7 @@ export default function Academy() {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-[#BC743A]">
+      <section className="relative py-16 px-4 bg-[#BC743A] pb-50 lg:pb-60">
         <div className="max-w-xl mx-auto text-center">
           <p className="text-sm text-gray-500">🙂 </p>
           <h2 className="text-3xl font-bold text-[#FDECDA] mt-2">
@@ -481,72 +499,91 @@ export default function Academy() {
             </div>
           )}
         </div>
+        <div className="pointer-events-none absolute bottom-[-30] left-0 w-full h-40 bg-gradient-to-b from-transparent via-[#fff]/50 to-[#fff]/100" />
+        <div className="pointer-events-none absolute bottom-[-30] left-0 w-full h-40 bg-gradient-to-b from-transparent via-[#fff]/50 to-[#fff]/100" />
+        <div className="pointer-events-none absolute bottom-[-30] left-0 w-full h-40 bg-gradient-to-b from-transparent via-[#fff]/50 to-[#fff]/100" />
       </section>
 
-      <section className="max-w-4xl mx-auto px-8 py-20">
-        <div className="lg:flex">
-          <Image
-            src=""
-            alt="Studio Cirqueira's — nossa missão"
-            className="w-full aspect-video object-cover rounded mb-14 border-1 border-black/20 lg:mr-20"
-          />
-          <div className="lg:flex lg:flex-col">
-            <span className="text-xs lg:text-sm font-medium tracking-widest uppercase text-[#bc743a]">
+      <section className="mx-auto">
+        <div className="flex flex-col lg:flex-row relative">
+          <div className="relative">
+            <div className="pointer-events-none absolute bottom-0 z-10 left-0 w-full h-30 lg:h-10 bg-gradient-to-b from-transparent via-[#fff]/50 to-[#fff]/100" />
+            <div className="pointer-events-none absolute bottom-0 z-10 left-0 w-full h-30 lg:h-10 bg-gradient-to-b from-transparent via-[#fff]/50 to-[#fff]/100" />
+            <div className="pointer-events-none absolute bottom-0 z-10 left-0 w-full h-30 lg:h-10 bg-gradient-to-b from-transparent via-[#fff]/50 to-[#fff]/100" />
+            <div className="pointer-events-none absolute bottom-0 z-10 left-0 w-full h-30 lg:h-10 bg-gradient-to-b from-transparent via-[#fff]/50 to-[#fff]/100" />
+            <div className="pointer-events-none absolute bottom-0 z-10 left-0 w-full h-30 lg:h-10 bg-gradient-to-b from-transparent via-[#fff]/50 to-[#fff]/100" />
+            <div className="pointer-events-none absolute bottom-0 z-10 left-0 w-full h-30 lg:h-10 bg-gradient-to-b from-transparent via-[#fff]/50 to-[#fff]/100" />
+            <div className="pointer-events-none absolute top-0 left-0 w-full h-10 bg-gradient-to-b from-[#fff]/100 via-[#fff]/50 to-transparent" />
+            {/* IMAGEM */}
+            <div className="w-full lg:w-[100%]">
+              <Image
+                src="/images/meninas-missao-2.png"
+                alt="Studio Cirqueira's — nossa missão"
+                width={1500}
+                height={500}
+                className="h-[80vw] lg:h-[900px] w-full object-cover mb-14 lg:mb-0"
+              />
+            </div>
+          </div>
+
+          {/* TEXTO */}
+          <div className="px-3 lg:px-0 lg:absolute lg:right-10 lg:top-1/2 lg:-translate-y-1/2 lg:w-[35%] bg-white/80 lg:bg-transparent p-6 lg:p-0">
+            <span className="text-xs lg:text-sm font-medium tracking-widest uppercase text-[#bc743a] lg:text-[#4c2a12]">
               Nossa missão
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl font-normal leading-tight text-black-100 mt-5 mb-7 max-w-2xl">
+
+            <h2 className="font-serif text-4xl md:text-5xl font-normal leading-tight text-black-100 mt-5 mb-7">
               Existe um jeito novo de fazer{" "}
-              <em className="italic text-[#bc743a]">beleza acontecer.</em>
+              <em className="italic text-[#bc743a] lg:text-[#4c2a12]">
+                beleza acontecer.
+              </em>
             </h2>
-            <p className="text-base font-light leading-loose text-black-300 max-w-2xl mb-6">
+
+            <p className="text-base font-light leading-loose text-black mb-6 lg:drop-shadow-[0_8px_6px_rgba(0,0,0,0.7)]">
               E ele já chegou. Por muito tempo, aprender beleza significou
-              aprender apenas técnica: repetir movimentos, copiar resultados,
-              seguir um manual. Mas o mercado mudou. As clientes mudaram. E quem
-              ainda pensa só em técnica, fica para trás.
+              aprender apenas técnica...
             </p>
-            <p className="text-base font-light leading-loose text-black-300 max-w-2xl mb-14">
-              No Studio Cirqueira&apos;s, a gente acredita em outra coisa.
-              Educação de verdade é aquela que forma a mão, forma o olhar e
-              forma a mente. É integrada. É sistêmica. É sem limites e sem
-              barreiras entre o que você sabe fazer e o que você pode construir.
+
+            <p className="text-base font-light leading-loose text-black lg:drop-shadow-[0_8px_6px_rgba(0,0,0,0.7)]">
+              No Studio Cirqueira&apos;s, a gente acredita em outra coisa...
             </p>
           </div>
         </div>
 
-        <h3 className="font-serif text-2xl md:text-3xl italic font-bold text-black-100 border-l-2 border-[#bc743a] pl-5 mb-5">
-          O sucesso não é sorte. Não é dom. É decisão.
-        </h3>
-
-        <p className="text-sm lg:text-base font-light leading-loose text-black-400 max-w-2xl pl-5 mb-6">
-          Aqui no Studio Cirqueira&apos;s, a gente não forma só profissionais
-          que sabem fazer bonito. A gente forma{" "}
-          <strong className="text-black-100 font-bold">
-            empreendedoras visionárias
-          </strong>
-          , mulheres que entendem que técnica sem estratégia é talento
-          desperdiçado. Mulheres que sabem precificar o próprio trabalho, que
-          constroem marca, que atraem cliente certo e cobram o que valem.
-        </p>
-
-        <p className="text-sm lg:text-base font-light leading-loose text-black-400 max-w-2xl pl-5 mb-6">
-          Você vai aprender a{" "}
-          <strong className="text-black-100 font-bold">
-            viver a beleza como negócio, como arte e como legado
-          </strong>
-          . Negócio, porque precisa sustentar sua vida. Arte, porque precisa
-          fazer sentido pra você. Legado, porque vai além de você: é o que fica
-          em cada cliente que você transforma, em cada profissional que você
-          inspira.
-        </p>
-
-        <p className="text-sm lg:text-base font-light leading-loose text-black-400 max-w-2xl pl-5">
-          Sem fórmula mágica. Sem atalho. Sem promessa vazia. Aqui é
-          conhecimento aplicado, prática de verdade e resultado que você enxerga
-          e sente, na sua mão, no seu bolso e na sua nova versão profissional.
-        </p>
+        <div className="max-w-4xl mx-auto px-3 pb-20 0 lg:my-30">
+          <h3 className="font-serif text-2xl md:text-3xl italic font-bold text-black-100 border-l-2 border-[#bc743a] pl-5 mb-5">
+            O sucesso não é sorte. Não é dom. É decisão.
+          </h3>
+          <p className="text-md lg:text-base font-light leading-loose text-black-400 max-w-2xl pl-5 mb-6">
+            Aqui no Studio Cirqueira&apos;s, a gente não forma só profissionais
+            que sabem fazer bonito. A gente forma{" "}
+            <strong className="text-black-100 font-bold">
+              empreendedoras visionárias
+            </strong>
+            , mulheres que entendem que técnica sem estratégia é talento
+            desperdiçado. Mulheres que sabem precificar o próprio trabalho, que
+            constroem marca, que atraem cliente certo e cobram o que valem.
+          </p>
+          <p className="text-md lg:text-base font-light leading-loose text-black-400 max-w-2xl pl-5 mb-6">
+            Você vai aprender a{" "}
+            <strong className="text-black-100 font-bold">
+              viver a beleza como negócio, como arte e como legado
+            </strong>
+            . Negócio, porque precisa sustentar sua vida. Arte, porque precisa
+            fazer sentido pra você. Legado, porque vai além de você: é o que
+            fica em cada cliente que você transforma, em cada profissional que
+            você inspira.
+          </p>
+          <p className="text-md lg:text-base font-light leading-loose text-black-400 max-w-2xl pl-5">
+            Sem fórmula mágica. Sem atalho. Sem promessa vazia. Aqui é
+            conhecimento aplicado, prática de verdade e resultado que você
+            enxerga e sente, na sua mão, no seu bolso e na sua nova versão
+            profissional.
+          </p>
+        </div>
       </section>
 
-      <section className="w-full flex justify-center py-10 bg-[#fdecda]">
+      <section className="w-full flex justify-center py-20 lg:py-30 bg-[#fdecda]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
