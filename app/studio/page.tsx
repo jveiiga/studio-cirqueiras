@@ -44,11 +44,11 @@ export default function ClinicaPage() {
 
         {/* CLINICA INTRO */}
         <section className="lg:py-16 text-center px-6">
-          <h2 className="font-poppins text-3xl text-[#BC743A] lg:text-5xl my-15">
+          <h2 className="font-poppins text-3xl text-[#BC743A] lg:text-5xl mt-15 mb-5">
             Nosso Stúdio
           </h2>
 
-          <p className="max-w-2xl mx-auto text-sm mb-20 lg:text-lg">
+          <p className="max-w-2xl mx-auto text-md mb-20 lg:text-lg">
             O Studio Cirqueira’s une técnicas avançadas com um atendimento
             personalizado, focado em resultados eficazes e na valorização da
             beleza individual.
@@ -57,15 +57,15 @@ export default function ClinicaPage() {
           <CardSlider1 />
         </section>
         <motion.hr
-          className="w-[90%] mx-auto border-t-1 border-gray-400 mt-20 lg:my-20"
+          className="w-[90%] mx-auto border-t-1 border-gray-400 mt-15 lg:my-20"
           initial={{ x: 80, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
         />
         {/* UNIDADE */}
-        <section className="py-16 px-6 pb-50 text-center">
-          <h2 className="font-poppins text-2xl mb-20 lg:text-5xl">
+        <section className="py-15 px-6 pb-30 text-center">
+          <h2 className="font-poppins text-2xl mb-15 lg:text-5xl">
             Nossa <span className="text-[#BC743A]">Unidade</span>
           </h2>
 
