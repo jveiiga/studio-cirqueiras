@@ -26,7 +26,7 @@ export default function CardSlider() {
       >
         <SwiperSlide className="">
           <div className="relative mx-5 h-[500px] sm:w-[90%] sm:h-[800px] sm:mx-auto lg:mx-auto lg:max-w-[370px] xl:w-full rounded-2xl overflow-hidden">
-            <Image src="/images/design-simples.JPG" alt="Design Simples" fill className="object-cover" />
+            <Image src="/images/design-simples.jpg" alt="Design Simples" fill className="object-cover" />
             <div className="absolute inset-0 flex items-end px-6 py-10 bg-gradient-to-t from-[#4c2a12]/60">
               <p className="text-white text-4xl uppercase tracking-wide">Design Simples</p>
             </div>
