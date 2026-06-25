@@ -16,7 +16,9 @@ export default function Contact() {
             backgroundImage: `url(${imageUrl})`,
             backgroundPosition: "30% 50%",
           }}
-        ></section>
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-[#4C2A12]/20 via-[#4C2A12]/30 to-transparent" />
+        </section>
 
         <section className="relative overflow-hidden bg-white">
           {/* <div className="absolute inset-0 bg-gradient-to-r from-[#4C2A12]/90 to-[#BC743A]/70" /> */}
@@ -77,10 +79,10 @@ export default function Contact() {
               </h2>
 
               <p className="font-inter text-black/80 leading-8 mt-8">
-                O Studio Cirqueira's nasceu com a proposta de unir atendimento
-                personalizado, técnicas modernas e um ambiente acolhedor. Mais
-                do que procedimentos, entregamos momentos de bem-estar e cuidado
-                em cada detalhe.
+                O Studio Cirqueira&apos;s nasceu com a proposta de unir
+                atendimento personalizado, técnicas modernas e um ambiente
+                acolhedor. Mais do que procedimentos, entregamos momentos de
+                bem-estar e cuidado em cada detalhe.
               </p>
 
               <p className="font-inter text-black/80 leading-8 mt-6">

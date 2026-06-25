@@ -19,18 +19,23 @@ export default function ClinicaPage() {
             fill
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#BC743A] via-[#BC743A]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#4c2a12]/90 via-[#fdecda]/60 to-transparent" />
 
-          <div className="relative z-10 text-white">
-            <h1 className="font-poppins text-6xl md:text-7xl lg:text-8xl leading-tight">
+          <div className="relative z-10 text-black">
+            <h1 className="font-inter text-6xl md:text-7xl lg:text-8xl leading-tight">
               Studio <br /> Cirqueira&apos;s
             </h1>
 
-            <p className="mt-4 mb-10 max-w-md text-sm">
+            <p className="mt-4 mb-10 max-w-md text-lg">
               Conheça o studio de atendimento e nossos procedimentos.
             </p>
 
-            <button className="relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] md:h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group">
+            <button onClick={() =>
+                  document
+                    .getElementById("studio")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+            className="relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] md:h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group">
               <span className="absolute inset-0 bg-[#ffffff]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
               <span className="absolute inset-0 opacity-0 border-t border-b border-[#ffffff]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
               <span className="text-sm relative text-sm z-10 transition-all duration-300 group-hover:tracking-widest">
@@ -38,12 +43,12 @@ export default function ClinicaPage() {
               </span>
             </button>
 
-            <p className="mt-20 text-sm opacity-80">CONHEÇA NOSSO STUDIO ↓</p>
+            <p className="mt-20 text-sm opacity-80">CONHEÇA NOSSO STUDIO</p>
           </div>
         </section>
 
         {/* CLINICA INTRO */}
-        <section className="lg:py-16 text-center px-6">
+        <section className="lg:py-16 text-center px-6" id="studio">
           <h2 className="font-poppins text-3xl text-[#BC743A] lg:text-5xl mt-15 mb-5">
             Nosso Stúdio
           </h2>

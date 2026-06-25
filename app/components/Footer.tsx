@@ -34,7 +34,7 @@ export default function Footer() {
                             className="mt-4"
                         />
                         <div className="flex flex-start">
-                            <p>© 2026 Studio Cirqueira&apos;s. Todos os direitos reservados.</p>
+                            <p>© 2026 Studio Cirqueira&apos;    s. Todos os direitos reservados.</p>
                         </div>
                         <div className="flex flex-start items-center">
                             <p>Desenvolvido por:</p>

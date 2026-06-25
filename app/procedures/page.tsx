@@ -156,12 +156,16 @@ export default function Procedures() {
               <button
                 onClick={() =>
                   document
-                    .getElementById("sobre")
+                    .getElementById("procedures")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="my-10 uppercase w-[150px] h-[50px] text-black border border-[#4c2a12]/50 xl:w-[250px] xl:h-[60px]"
+                className="relative my-10 overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] leading-[50px] text-black transition-all duration-300 group"
               >
-                Saiba Mais
+                <span className="absolute inset-0 bg-[#4c2a12]/20 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
+                <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
+                <span className="relative z-10 text-sm transition-all duration-300 group-hover:tracking-widest">
+                  Saiba mais
+                </span>
               </button>
             </div>
 
@@ -186,7 +190,7 @@ export default function Procedures() {
         </motion.div>
       </section>
 
-      <section className="mb-30">
+      <section className="mb-30" id="procedures">
         <ProcedureItem
           image="/images/nail-art.jpg"
           title="Nail Art"
