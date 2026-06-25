@@ -1,18 +1,17 @@
 "use client";
 import Image from "next/image";
-import Header from "./components/Header"
+import Header from "./components/Header";
 import Slider from "./components/Swipper";
 import Footer from "./components/Footer";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="">
-      <Header image="/images/logo_studio.png"/>
+      <Header image="/images/logo_studio.png" />
       <main>
-        <section
-          className="bg-[#fdecda]"
-        >
+        <section className="bg-[#fdecda]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -39,10 +38,18 @@ export default function Home() {
               </p>
 
               <p className="text-sm max-w-[500px] my-5 sm:text-base md:text-md lg:max-w-[350px] lg:my-10 lg:max-w-[400px] xl:text-lg font-inter">
-                Questionamos padrões e valorizamos o que é real, entregando resultados que vão além do esperado.
+                Questionamos padrões e valorizamos o que é real, entregando
+                resultados que vão além do esperado.
               </p>
 
-              <button className="relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] md:h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group">
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("nos")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] md:h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group"
+              >
                 <span className="absolute inset-0 bg-[#4c2a12]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
                 <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
                 <span className="text-sm relative text-sm z-10 transition-all duration-300 group-hover:tracking-widest">
@@ -53,14 +60,16 @@ export default function Home() {
           </motion.div>
         </section>
 
-        <section className="mb-10">
+        <section className="mb-10" id="nos">
           <motion.p
             className="text-sm my-10 ml-[5%] uppercase text-gray-500"
             initial={{ x: -80, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
             viewport={{ once: true }}
-          >Conheça melhor nossos serviços</motion.p>
+          >
+            Conheça melhor nossos serviços
+          </motion.p>
           <motion.hr
             className="w-[90%] mx-auto border-t-1 border-gray-500 mb-10"
             initial={{ x: 80, opacity: 0 }}
@@ -74,13 +83,14 @@ export default function Home() {
               <span className="text-[#c9964d]">Studio Cirqueira&apos;s</span>
             </h1>
             <p className="text-sm max-w-[500px] mb-15 sm:text-sm md:text-md md:max-w-[650px] lg:text-lg lg:max-w-[800px] lg:text-center xl:text-lg xl:max-w-[800px]">
-              No nosso studio, o foco está em cuidados bem executados, com atenção aos detalhes e respeito à sua individualidade, para realçar o que há de melhor em você.
+              No nosso studio, o foco está em cuidados bem executados, com
+              atenção aos detalhes e respeito à sua individualidade, para
+              realçar o que há de melhor em você.
             </p>
           </div>
 
           <div className="flex items-stretch justify-center rounded-3xl">
             <div className="flex-col-reverse sm:flex-col-reverse sm:text-md md:flex-row lg:flex-row xl:flex-row flex mx-5 overflow-hidden rounded-3xl">
-
               <div className="relative w-full h-[300px] md:w-full md:h-full lg:w-[400px] lg:h-[500px] xl:w-[500px] xl:h-[500px]">
                 <Image
                   src="/images/std-cirqueiras.png"
@@ -91,21 +101,25 @@ export default function Home() {
               </div>
 
               <div className="bg-[#c9964d] flex flex-col justify-center items-start p-6">
-
                 <p className="text-sm font-bold font-poppins sm:text-2xl sm:mt-30 md:text-2xl lg:max-w-[500px] text-3xl max-w-xl mx-auto my-6">
-                  Valorizar o que é natural é uma escolha que reflete equilíbrio, autenticidade e bem-estar.
+                  Valorizar o que é natural é uma escolha que reflete
+                  equilíbrio, autenticidade e bem-estar.
                 </p>
-                <p className="text-sm mb-6">Conheça nosso local de atendimento.</p>
+                <p className="text-sm mb-6">
+                  Conheça nosso local de atendimento.
+                </p>
                 <a
                   href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
                   target="_blank"
-                  className="sm:my-5 relative flex justify-center items-center overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] leading-[50px] text-black text-sm transition-all duration-300 group">
+                  className="sm:my-5 relative flex justify-center items-center overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] leading-[50px] text-black text-sm transition-all duration-300 group"
+                >
                   <span className="absolute inset-0 bg-black/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
                   <span className="absolute inset-0 opacity-0 border-t border-b border-black/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
-                  <span className="relative z-10 transition-all duration-300 group-hover:tracking-widest">Atendimento</span>
+                  <span className="relative z-10 transition-all duration-300 group-hover:tracking-widest">
+                    Atendimento
+                  </span>
                 </a>
               </div>
-
             </div>
           </div>
         </section>
@@ -139,18 +153,31 @@ export default function Home() {
                 />
                 <div className="">
                   <p className="text-2xl sm:text-4xl md:text-5xl md:min-w-[380px] lg:text-6xl lg:w-[500px] xl:w-[600px] xl:max-w-xl xl:text-7xl">
-                    <span className="font-poppins mt-5 text-[#bc743a]">Onde </span>
-                    <span className="font-poppins mt-5 text-[#4c2a12]">nasce o</span>
+                    <span className="font-poppins mt-5 text-[#bc743a]">
+                      Onde{" "}
+                    </span>
+                    <span className="font-poppins mt-5 text-[#4c2a12]">
+                      nasce o
+                    </span>
                   </p>
-                  <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl lg:w-full xl:text-6xl font-poppins">Studio Cirqueira&apos;s</h2>
-                  <p className="mt-5 text-sm sm:mt-10 md:text-md md:max-w-[400px] lg:text-lg lg:max-w-[400px] lg:mt-15 xl:text-lg xl:mt-25 lg:leading-loose">O studio nasceu da vontade de impactar pessoas de forma real, defendendo a liberdade de ser quem se é e valorizando a beleza sem imposições.</p>
-                  <button className="my-10 sm:my-10 md:mb-10 md:mt-20 relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] leading-[50px] text-black text-sm transition-all duration-300 group">
+                  <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl lg:w-full xl:text-6xl font-poppins">
+                    Studio Cirqueira&apos;s
+                  </h2>
+                  <p className="mt-5 text-sm sm:mt-10 md:text-md md:max-w-[400px] lg:text-lg lg:max-w-[400px] lg:mt-15 xl:text-lg xl:mt-25 lg:leading-loose">
+                    O studio nasceu da vontade de impactar pessoas de forma
+                    real, defendendo a liberdade de ser quem se é e valorizando
+                    a beleza sem imposições.
+                  </p>
+                  <a
+                    href="/about"
+                    className="my-10 sm:my-10 md:mb-10 md:mt-20 relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] leading-[50px] text-black text-sm transition-all duration-300 group inline-block text-center"
+                  >
                     <span className="absolute inset-0 bg-[#4c2a12]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
                     <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
                     <span className="relative z-10 transition-all duration-300 group-hover:tracking-widest">
                       Saiba Mais
                     </span>
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -190,7 +217,8 @@ export default function Home() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
             viewport={{ once: true }}
-          >Conheça nossos procedimentos
+          >
+            Conheça nossos procedimentos
           </motion.p>
           <motion.hr
             className="w-[90%] mx-auto border-t-1 border-gray-500 mb-10"
@@ -214,14 +242,16 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 4, ease: "easeOut" }}
-            viewport={{ once: true }} >
+            viewport={{ once: true }}
+          >
             <motion.p
               className="my-10 lg:mb-15 lg:mt-40 ml-auto mr-[5%] uppercase text-gray-500 w-fit"
               initial={{ x: 80, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
-            >Blog
+            >
+              Blog
             </motion.p>
             <motion.hr
               className="w-[90%] mx-auto border-t-1 border-gray-500 mb-10 lg:mb-15"
@@ -236,92 +266,118 @@ export default function Home() {
             </h4>
 
             <div className="flex-col flex justify-center items-center gap-10 mx-5 mb-30 lg:flex-row ">
-
               <div className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
                 <div className="relative w-full h-[150px] md:h-[200px] lg:h-[130px] xl:h-[230px]">
-                  <Image src="/images/sobrancelha.png" alt="Postagem do blog explicando tudo que você precisa saber sobre design de sobrancelhas" fill className="object-cover" />
+                  <Image
+                    src="/images/sobrancelha.png"
+                    alt="Postagem do blog explicando tudo que você precisa saber sobre design de sobrancelhas"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <p className="text-sm md:text-lg lg:text-base xl:text-xl pt-5 px-5">Design de Sobrancelhas: tudo o que você precisa saber</p>
-                <button
-                  type="button"
-                  className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130] h-[40] lg:w-[150px] lg:h-[40px] md:mt-5 md:w-[130px]
-                          text-md text-black border-2 border-[#333]
-                          transition-all duration-300
-                          after:content-[''] after:absolute after:top-0 after:left-0
-                          after:w-0 after:h-full after:bg-black
-                          after:transition-all after:duration-300
-                          hover:text-white hover:border-white hover:after:w-full
-                          group cursor-pointer"
-                >
-                  <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
-                    Ler Sobre
-                    <Image
-                      src="/images/seta-direita-preta.png"
-                      alt="Seta para direita"
-                      width={18}
-                      height={18}
-                      className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
-                    />
-                  </span>
-                </button>
+                <p className="text-sm md:text-lg lg:text-base xl:text-xl pt-5 px-5">
+                  Design de Sobrancelhas: tudo o que você precisa saber
+                </p>
+                <Link href="/blog/design-sobrancelha">
+                  <button
+                    type="button"
+                    className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130px] h-[40px] lg:w-[150px] lg:h-[40px]
+              text-md text-black border-2 border-[#333]
+              transition-all duration-300
+              after:content-[''] after:absolute after:top-0 after:left-0
+              after:w-0 after:h-full after:bg-black
+              after:transition-all after:duration-300
+              hover:text-white hover:border-white hover:after:w-full
+              group cursor-pointer"
+                  >
+                    <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
+                      Ler Sobre
+                      <Image
+                        src="/images/seta-direita-preta.png"
+                        alt="Seta para direita"
+                        width={18}
+                        height={18}
+                        className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
+                      />
+                    </span>
+                  </button>
+                </Link>
               </div>
 
               <div className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
                 <div className=" md:h-[200px] lg:h-[130px] xl:h-[230px] relative w-full h-[150px]">
-                  <Image src="/images/micro.png" alt="Design com Henna" fill className="object-cover" />
+                  <Image
+                    src="/images/micro.png"
+                    alt="Design com Henna"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <p className="text-sm md:text-lg lg:text-base xl:text-xl pt-5 px-5">10 hábitos essenciais para prolongar a micropigmentação</p>
-                <button
-                  type="button"
-                  className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130] h-[40] lg:w-[150px] lg:h-[40px] md:mt-5 md:w-[130px]
-                          text-md text-black border-2 border-[#333]
-                          transition-all duration-300
-                          after:content-[''] after:absolute after:top-0 after:left-0
-                          after:w-0 after:h-full after:bg-black
-                          after:transition-all after:duration-300
-                          hover:text-white hover:border-white hover:after:w-full
-                          group cursor-pointer"
-                >
-                  <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
-                    Ler Sobre
-                    <Image
-                      src="/images/seta-direita-preta.png"
-                      alt="Seta para direita"
-                      width={18}
-                      height={18}
-                      className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
-                    />
-                  </span>
-                </button>
+                <p className="text-sm md:text-lg lg:text-base xl:text-xl pt-5 px-5">
+                  10 hábitos essenciais para prolongar a micropigmentação
+                </p>
+                <Link href="/blog/micropigmentacao">
+                  <button
+                    type="button"
+                    className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130px] h-[40px] lg:w-[150px] lg:h-[40px]
+              text-md text-black border-2 border-[#333]
+              transition-all duration-300
+              after:content-[''] after:absolute after:top-0 after:left-0
+              after:w-0 after:h-full after:bg-black
+              after:transition-all after:duration-300
+              hover:text-white hover:border-white hover:after:w-full
+              group cursor-pointer"
+                  >
+                    <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
+                      Ler Sobre
+                      <Image
+                        src="/images/seta-direita-preta.png"
+                        alt="Seta para direita"
+                        width={18}
+                        height={18}
+                        className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
+                      />
+                    </span>
+                  </button>
+                </Link>
               </div>
 
               <div className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
                 <div className="relative w-full h-[150px] md:h-[200px] lg:h-[130px] xl:h-[230px]">
-                  <Image src="/images/nail.png" alt="Design com Henna" fill className="object-cover" />
+                  <Image
+                    src="/images/nail.png"
+                    alt="Design com Henna"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <p className="text-sm md:text-lg lg:text-base xl:text-xl pt-5 px-5">Quais cuidados especiais suas unhas devem ter?</p>
-                <button
-                  type="button"
-                  className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130] h-[40] lg:w-[150px] lg:h-[40px] md:mt-5 md:w-[130px]
-                          text-md text-black border-2 border-[#333]
-                          transition-all duration-300
-                          after:content-[''] after:absolute after:top-0 after:left-0
-                          after:w-0 after:h-full after:bg-black
-                          after:transition-all after:duration-300
-                          hover:text-white hover:border-white hover:after:w-full
-                          group cursor-pointer"
-                >
-                  <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
-                    Ler Sobre
-                    <Image
-                      src="/images/seta-direita-preta.png"
-                      alt="Seta para direita"
-                      width={18}
-                      height={18}
-                      className="transition-all duration-300 group-hover:invert group-hover:translate-x-1 md:object-contain"
-                    />
-                  </span>
-                </button>
+                <p className="text-sm md:text-lg lg:text-base xl:text-xl pt-5 px-5">
+                  Quais cuidados especiais suas unhas devem ter?
+                </p>
+                <Link href="/blog/unhas-cuidados">
+                  <button
+                    type="button"
+                    className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130px] h-[40px] lg:w-[150px] lg:h-[40px]
+              text-md text-black border-2 border-[#333]
+              transition-all duration-300
+              after:content-[''] after:absolute after:top-0 after:left-0
+              after:w-0 after:h-full after:bg-black
+              after:transition-all after:duration-300
+              hover:text-white hover:border-white hover:after:w-full
+              group cursor-pointer"
+                  >
+                    <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
+                      Ler Sobre
+                      <Image
+                        src="/images/seta-direita-preta.png"
+                        alt="Seta para direita"
+                        width={18}
+                        height={18}
+                        className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
+                      />
+                    </span>
+                  </button>
+                </Link>
               </div>
             </div>
           </motion.div>

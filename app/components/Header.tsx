@@ -45,9 +45,14 @@ export default function Header({ image, className }: HeaderProps) {
       </ul>
 
       {/* Botão desktop */}
-      <button className="hidden cursor-pointer lg:block lg:text-sm w-[130px] h-[40px] border-2 border-[#333] hover:bg-[#4c2a12] hover:text-white transition">
+      <a
+        href="/academy"
+        className="hidden lg:block w-[130px] h-[40px] border-2 border-[#333]
+             hover:bg-[#4c2a12] hover:text-white transition
+             flex items-center justify-center leading-[40px] text-sm text-center cursor-pointer"
+      >
         Cursos
-      </button>
+      </a>
 
       {/* Botão hamburguer */}
       <button

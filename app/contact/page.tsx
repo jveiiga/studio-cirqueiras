@@ -42,16 +42,6 @@ export default function Contact() {
                 desejam viver experiências exclusivas, combinando sofisticação,
                 acolhimento e resultados que encantam.
               </p>
-
-              <div className="mt-10">
-                <button className="relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] md:h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group">
-                  <span className="absolute inset-0 bg-[#4c2a12]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
-                  <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
-                  <span className="text-sm relative text-sm z-10 transition-all duration-300 group-hover:tracking-widest">
-                    Saiba mais
-                  </span>
-                </button>
-              </div>
             </div>
 
             <div className="relative">

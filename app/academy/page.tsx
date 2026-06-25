@@ -29,12 +29,13 @@ export default function Academy() {
   return (
     <div>
       <header className="absolute top-0 left-0 w-full z-420 bg-transparent flex items-center justify-between px-6 py-4">
-        <p className="text-2xl font-bold">
+        
+        <Link href="/" className="text-2xl font-bold">
           <span className="b-letter text-5xl font-dynalight">B</span>
           <span className="font-poppins font-[400] text-[20px] ml-[-3px]">
             eauty & Academy
           </span>
-        </p>
+        </Link>
         <ul className="hidden lg:flex gap-10 text-black lg:text-sm">
           {[
             { label: "Quem Somos", href: "/about" },
@@ -54,11 +55,11 @@ export default function Academy() {
             </li>
           ))}
         </ul>
-
-        <button className="hidden cursor-pointer lg:block lg:text-sm w-[130px] h-[40px] border-2 border-[#333] hover:bg-[#4c2a12] hover:text-white transition">
-          Cursos
-        </button>
-
+        <Link href="academy">
+          <button className="hidden cursor-pointer lg:block lg:text-sm w-[130px] h-[40px] border-2 border-[#333] hover:bg-[#4c2a12] hover:text-white transition">
+            Cursos
+          </button>
+        </Link>
         <button
           onClick={() => setOpen(!open)}
           className="lg:hidden flex flex-col gap-1"
@@ -67,7 +68,6 @@ export default function Academy() {
           <span className="w-6 h-[2px] bg-black"></span>
           <span className="w-6 h-[2px] bg-black"></span>
         </button>
-
         {open && (
           <div className="absolute top-full left-0 w-full z-50 bg-[url('/images/banner-academy.png')] bg-no-repeat lg:hidden">
             <ul className="flex flex-col items-center gap-6 py-6">
@@ -129,16 +129,18 @@ export default function Academy() {
               mas para se destacar no mundo real.
             </p>
 
-            <button
-              type="button"
-              className="mt-5 relative overflow-hidden w-[300] h-[50] lg:h-[50px]
-                text-md text-black border-2 border-[#333]
-                transition-all duration-300
-                after:content-[''] after:absolute after:top-0 after:left-0
-                after:w-0 after:h-full after:bg-black
-                after:transition-all after:duration-300
-                hover:text-white hover:border-white hover:after:w-full
-                group cursor-pointer"
+            <a
+              href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20cursos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 relative overflow-hidden w-[300px] h-[50px] lg:h-[50px]
+             text-md text-black border-2 border-[#333]
+             transition-all duration-300
+             after:content-[''] after:absolute after:top-0 after:left-0
+             after:w-0 after:h-full after:bg-black
+             after:transition-all after:duration-300
+             hover:text-white hover:border-white hover:after:w-full
+             group cursor-pointer inline-block"
             >
               <span className="relative whitespace-nowrap z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full">
                 Quero ser uma aluna
@@ -150,7 +152,7 @@ export default function Academy() {
                   className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
                 />
               </span>
-            </button>
+            </a>
           </div>
           <div className="pointer-events-none absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[#F5EEE4]" />
         </motion.div>
@@ -210,16 +212,18 @@ export default function Academy() {
             . No final do processo, você estará preparada para conduzir sua
             carreira.
           </p>
-          <button
-            type="button"
-            className="mt-5 relative overflow-hidden w-[300] h-[50] lg:h-[50px]
-                text-md text-black border-2 border-[#333]
-                transition-all duration-300
-                after:content-[''] after:absolute after:top-0 after:left-0
-                after:w-0 after:h-full after:bg-black
-                after:transition-all after:duration-300
-                hover:text-white hover:border-white hover:after:w-full
-                group cursor-pointer"
+          <a
+            href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20cursos"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 relative overflow-hidden w-[300px] h-[50px] lg:h-[50px]
+             text-md text-black border-2 border-[#333]
+             transition-all duration-300
+             after:content-[''] after:absolute after:top-0 after:left-0
+             after:w-0 after:h-full after:bg-black
+             after:transition-all after:duration-300
+             hover:text-white hover:border-white hover:after:w-full
+             group cursor-pointer inline-block"
           >
             <span className="relative whitespace-nowrap z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full">
               Pronta para evoluir?
@@ -231,7 +235,7 @@ export default function Academy() {
                 className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
               />
             </span>
-          </button>
+          </a>
         </div>
 
         <div className="px-5 lg:px-0">
@@ -382,14 +386,14 @@ export default function Academy() {
         <div className="absolute inset-0 bg-gradient-to-b from-white to-[#BC743A]/5 z-10" />
 
         <div className="relative lg:flex-1 z-20">
-        <div className="relative w-full h-[400px] lg:h-[500px]">
-          <Image
-            src="/images/nosso_jeito_cirqueiras.png"
-            alt="Jeito Cirqueira's"
-            fill
-            className="object-contain rounded-2xl"
-          />
-        </div>
+          <div className="relative w-full h-[400px] lg:h-[500px]">
+            <Image
+              src="/images/nosso_jeito_cirqueiras.png"
+              alt="Jeito Cirqueira's"
+              fill
+              className="object-contain rounded-2xl"
+            />
+          </div>
           <h2 className="text-3xl lg:text-5xl text-center text-black font-poppins lg:mt-30 mb-15">
             <span>Método </span>
             <br className="lg:hidden" />

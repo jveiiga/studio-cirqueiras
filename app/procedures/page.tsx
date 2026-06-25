@@ -11,6 +11,7 @@ type ProcedureItemProps = {
   buttonText: string;
   imageClass?: string;
   textSize?: string;
+  href: string;
 };
 
 const Divider = () => (
@@ -30,6 +31,7 @@ const ProcedureItem = ({
   buttonText,
   imageClass = "",
   textSize = "text-sm",
+  href,
 }: ProcedureItemProps) => (
   <div className="px-5 md:flex md:flex-col-reverse lg:max-w-[600px] xl:max-w-full xl:flex xl:flex-row-reverse xl:justify-between xl:mb-40 2xl:justify-evenly">
     <div>
@@ -48,16 +50,18 @@ const ProcedureItem = ({
         {description}
       </p>
 
-      <button
-        type="button"
-        className="mt-5 mb-8 relative overflow-hidden w-[230] h-[40] lg:h-[40px] md:mt-5
-                   text-md text-black border-2 border-[#333]
-                   transition-all duration-300
-                   after:content-[''] after:absolute after:top-0 after:left-0
-                   after:w-0 after:h-full after:bg-black
-                   after:transition-all after:duration-300
-                   hover:text-white hover:border-white hover:after:w-full
-                   group cursor-pointer"
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        className="mt-5 mb-8 relative overflow-hidden w-[230px] h-[40px] lg:h-[40px] md:mt-5
+             text-md text-black border-2 border-[#333]
+             transition-all duration-300
+             after:content-[''] after:absolute after:top-0 after:left-0
+             after:w-0 after:h-full after:bg-black
+             after:transition-all after:duration-300
+             hover:text-white hover:border-white hover:after:w-full
+             group cursor-pointer inline-block"
       >
         <span
           className={`relative ${textSize} whitespace-nowrap z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full`}
@@ -71,7 +75,7 @@ const ProcedureItem = ({
             className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
           />
         </span>
-      </button>
+      </a>
     </div>
   </div>
 );
@@ -196,6 +200,7 @@ export default function Procedures() {
           title="Nail Art"
           description="Unhas sem destaque deixam de ser um problema com a Nail Art. Cada detalhe é pensado para valorizar suas mãos, trazendo estilo, personalidade e acabamento impecável."
           buttonText="Destaque suas unhas"
+          href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
         />
         <Divider />
 
@@ -204,6 +209,8 @@ export default function Procedures() {
           title="Banho de Gel"
           description="Unhas frágeis e quebradiças deixam de ser um problema com o banho de gel. O procedimento fortalece, protege e garante um acabamento elegante e duradouro."
           buttonText="Sinta essa Mudança"
+          href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
+
         />
         <Divider />
 
@@ -213,6 +220,8 @@ export default function Procedures() {
           description="O brow lamination realça o desenho natural das sobrancelhas, proporcionando fios alinhados, aparência mais cheia e um acabamento elegante que transforma o olhar."
           buttonText="Realce seu olhar"
           imageClass="object-[70%_20%] sm:object-[90%_20%]"
+          href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
+
         />
         <Divider />
 
@@ -223,6 +232,8 @@ export default function Procedures() {
           buttonText="Sinta essa transformação"
           textSize="text-[12px]"
           imageClass="sm:object-[70%_70%]"
+          href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
+
         />
         <Divider />
 
@@ -232,6 +243,8 @@ export default function Procedures() {
           description="Henna aplicada para criar sobrancelhas mais expressivas, com efeito alinhado, sofisticado e personalizado ao seu rosto."
           buttonText="Defina seu olhar"
           imageClass="object-[70%_20%] sm:object-[70%_10%]"
+          href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
+
         />
         <Divider />
 
@@ -242,6 +255,8 @@ export default function Procedures() {
           buttonText="Descubra essa experiência"
           textSize="text-[12px]"
           imageClass="object-[70%_20%] sm:object-[70%_36%]"
+          href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
+
         />
         <Divider />
 
@@ -252,6 +267,8 @@ export default function Procedures() {
           buttonText="Explore esse novo olhar"
           textSize="text-[12px]"
           imageClass="object-[70%_20%] sm:object-[70%_28%]"
+          href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
+
         />
         <Divider />
 
@@ -261,6 +278,8 @@ export default function Procedures() {
           description="Mega Fox entrega um olhar intenso e impactante, com alongamento extremo e efeito lifting que transforma a expressão."
           buttonText="Viva essa versão"
           imageClass="object-[70%_20%] sm:object-[70%_10%]"
+          href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
+
         />
       </section>
 

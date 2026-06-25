@@ -4,6 +4,7 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Blog() {
   return (
@@ -95,28 +96,30 @@ export default function Blog() {
                 <p className="text-sm md:text-lg lg:text-base xl:text-xl pt-5 px-5">
                   Design de Sobrancelhas: tudo o que você precisa saber
                 </p>
-                <button
-                  type="button"
-                  className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130] h-[40] lg:w-[150px] lg:h-[40px] md:mt-5 md:w-[130px]
-                          text-md text-black border-2 border-[#333]
-                          transition-all duration-300
-                          after:content-[''] after:absolute after:top-0 after:left-0
-                          after:w-0 after:h-full after:bg-black
-                          after:transition-all after:duration-300
-                          hover:text-white hover:border-white hover:after:w-full
-                          group cursor-pointer"
-                >
-                  <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
-                    Ler Sobre
-                    <Image
-                      src="/images/seta-direita-preta.png"
-                      alt="Seta para direita"
-                      width={18}
-                      height={18}
-                      className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
-                    />
-                  </span>
-                </button>
+                <Link href="/blog/design-sobrancelha">
+                  <button
+                    type="button"
+                    className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130px] h-[40px] lg:w-[150px] lg:h-[40px]
+              text-md text-black border-2 border-[#333]
+              transition-all duration-300
+              after:content-[''] after:absolute after:top-0 after:left-0
+              after:w-0 after:h-full after:bg-black
+              after:transition-all after:duration-300
+              hover:text-white hover:border-white hover:after:w-full
+              group cursor-pointer"
+                  >
+                    <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
+                      Ler Sobre
+                      <Image
+                        src="/images/seta-direita-preta.png"
+                        alt="Seta para direita"
+                        width={18}
+                        height={18}
+                        className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
+                      />
+                    </span>
+                  </button>
+                </Link>
               </div>
 
               <div className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
@@ -131,28 +134,30 @@ export default function Blog() {
                 <p className="text-sm md:text-lg lg:text-base xl:text-xl pt-5 px-5">
                   10 hábitos essenciais para prolongar a micropigmentação
                 </p>
-                <button
-                  type="button"
-                  className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130] h-[40] lg:w-[150px] lg:h-[40px] md:mt-5 md:w-[130px]
-                          text-md text-black border-2 border-[#333]
-                          transition-all duration-300
-                          after:content-[''] after:absolute after:top-0 after:left-0
-                          after:w-0 after:h-full after:bg-black
-                          after:transition-all after:duration-300
-                          hover:text-white hover:border-white hover:after:w-full
-                          group cursor-pointer"
-                >
-                  <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
-                    Ler Sobre
-                    <Image
-                      src="/images/seta-direita-preta.png"
-                      alt="Seta para direita"
-                      width={18}
-                      height={18}
-                      className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
-                    />
-                  </span>
-                </button>
+                <Link href="/blog/micropigmentacao">
+                  <button
+                    type="button"
+                    className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130px] h-[40px] lg:w-[150px] lg:h-[40px]
+              text-md text-black border-2 border-[#333]
+              transition-all duration-300
+              after:content-[''] after:absolute after:top-0 after:left-0
+              after:w-0 after:h-full after:bg-black
+              after:transition-all after:duration-300
+              hover:text-white hover:border-white hover:after:w-full
+              group cursor-pointer"
+                  >
+                    <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
+                      Ler Sobre
+                      <Image
+                        src="/images/seta-direita-preta.png"
+                        alt="Seta para direita"
+                        width={18}
+                        height={18}
+                        className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
+                      />
+                    </span>
+                  </button>
+                </Link>
               </div>
 
               <div className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
@@ -167,28 +172,30 @@ export default function Blog() {
                 <p className="text-sm md:text-lg lg:text-base xl:text-xl pt-5 px-5">
                   Quais cuidados especiais suas unhas devem ter?
                 </p>
-                <button
-                  type="button"
-                  className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130] h-[40] lg:w-[150px] lg:h-[40px] md:mt-5 md:w-[130px]
-                          text-md text-black border-2 border-[#333]
-                          transition-all duration-300
-                          after:content-[''] after:absolute after:top-0 after:left-0
-                          after:w-0 after:h-full after:bg-black
-                          after:transition-all after:duration-300
-                          hover:text-white hover:border-white hover:after:w-full
-                          group cursor-pointer"
-                >
-                  <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
-                    Ler Sobre
-                    <Image
-                      src="/images/seta-direita-preta.png"
-                      alt="Seta para direita"
-                      width={18}
-                      height={18}
-                      className="transition-all duration-300 group-hover:invert group-hover:translate-x-1 md:object-contain"
-                    />
-                  </span>
-                </button>
+                <Link href="/blog/unhas-cuidados">
+                  <button
+                    type="button"
+                    className="mt-5 mb-8 ml-5 relative overflow-hidden w-[130px] h-[40px] lg:w-[150px] lg:h-[40px]
+              text-md text-black border-2 border-[#333]
+              transition-all duration-300
+              after:content-[''] after:absolute after:top-0 after:left-0
+              after:w-0 after:h-full after:bg-black
+              after:transition-all after:duration-300
+              hover:text-white hover:border-white hover:after:w-full
+              group cursor-pointer"
+                  >
+                    <span className="relative text-sm z-10 uppercase tracking-wider flex items-center gap-1 justify-center h-full md:text-sm">
+                      Ler Sobre
+                      <Image
+                        src="/images/seta-direita-preta.png"
+                        alt="Seta para direita"
+                        width={18}
+                        height={18}
+                        className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
+                      />
+                    </span>
+                  </button>
+                </Link>
               </div>
             </div>
           </motion.div>
