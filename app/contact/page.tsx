@@ -1,11 +1,11 @@
 "use client";
 
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import { motion } from "framer-motion";
+import { Loader2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { Loader2 } from "lucide-react";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 // Variantes de animação reutilizáveis
 const fadeUp = {
