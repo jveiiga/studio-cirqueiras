@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Blog() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Header image="/images/logo_studio.png" />
       <main>
         <section className="relative w-full h-[70vh] sm:h-[80vh] lg:h-[90vh] overflow-hidden">
@@ -48,9 +48,15 @@ export default function Blog() {
                 </span>
               </button>
 
-              <p className="mt-4 text-md text-black font-inter">
+              <motion.p
+                className="text-sm my-5 lg:ml-[5%] lg:mt-10 uppercase text-gray-800"
+                initial={{ x: -80, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+                viewport={{ once: true }}
+              >
                 Saiba mais sobre nossos procedimentos
-              </p>
+              </motion.p>
             </div>
           </div>
         </section>
@@ -202,6 +208,6 @@ export default function Blog() {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

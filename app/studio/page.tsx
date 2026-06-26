@@ -9,7 +9,7 @@ import { FaWhatsapp, FaInstagram, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function ClinicaPage() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Header image="/images/logo_studio.png" />
       <main className="font-inter text-[#4C2A12] bg-[#FDECDA]">
         <section className="relative h-[80vh] w-full flex items-center px-3 lg:px-20">
@@ -30,12 +30,14 @@ export default function ClinicaPage() {
               Conheça o studio de atendimento e nossos procedimentos.
             </p>
 
-            <button onClick={() =>
-                  document
-                    .getElementById("studio")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-            className="relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] md:h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group">
+            <button
+              onClick={() =>
+                document
+                  .getElementById("studio")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] md:h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group"
+            >
               <span className="absolute inset-0 bg-[#ffffff]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
               <span className="absolute inset-0 opacity-0 border-t border-b border-[#ffffff]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
               <span className="text-sm relative text-sm z-10 transition-all duration-300 group-hover:tracking-widest">
@@ -43,7 +45,15 @@ export default function ClinicaPage() {
               </span>
             </button>
 
-            <p className="mt-20 text-sm opacity-80">CONHEÇA NOSSO STUDIO</p>
+            <motion.p
+              className="text-sm my-5 lg:ml-[5%] mt-20 lg:mt-10 uppercase text-gray-800"
+              initial={{ x: -80, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              Conheça nosso studio
+            </motion.p>
           </div>
         </section>
 
@@ -122,6 +132,6 @@ export default function ClinicaPage() {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -1,43 +1,42 @@
 "use client";
 import Image from "next/image";
-import Header from "../components/Header";
 import { motion } from "framer-motion";
-import Footer from "../components/Footer";
-import { Variants } from "framer-motion";
+import Header from "./app/components/Header";
+import Footer from "./app/components/Footer";
 
-export const fadeUp: Variants = {
+const fadeUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: (delay: number = 0) => ({
+  visible: (delay = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: "easeOut", delay },
+    transition: { duration: 0.7, ease: "easeOut" as const, delay },
   }),
 };
 
-export const fadeLeft: Variants = {
+const fadeLeft = {
   hidden: { opacity: 0, x: -60 },
-  visible: (delay: number = 0) => ({
+  visible: (delay = 0) => ({
     opacity: 1,
     x: 0,
-    transition: { duration: 0.8, ease: "easeOut", delay },
+    transition: { duration: 0.8, ease: "easeOut" as const, delay },
   }),
 };
 
-export const fadeRight: Variants = {
+const fadeRight = {
   hidden: { opacity: 0, x: 60 },
-  visible: (delay: number = 0) => ({
+  visible: (delay = 0) => ({
     opacity: 1,
     x: 0,
-    transition: { duration: 0.8, ease: "easeOut", delay },
+    transition: { duration: 0.8, ease: "easeOut" as const, delay },
   }),
 };
 
-export const imageReveal: Variants = {
+const imageReveal = {
   hidden: { opacity: 0, scale: 0.95 },
-  visible: (delay: number = 0) => ({
+  visible: (delay = 0) => ({
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.7, ease: "easeOut", delay },
+    transition: { duration: 0.7, ease: "easeOut" as const, delay },
   }),
 };
 

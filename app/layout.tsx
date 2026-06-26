@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display, Inter, Dynalight, WindSong } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -51,6 +53,7 @@ export default function RootLayout({
         className={`${poppins.variable} ${playfair.variable} ${inter.variable} ${dynalight.variable} ${windsong.variable} antialiased`}
       >
         {children}
+        <ToastContainer position="top-right" />
       </body>
     </html>
   );

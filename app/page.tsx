@@ -5,102 +5,212 @@ import Slider from "./components/Swipper";
 import Footer from "./components/Footer";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Variants } from "framer-motion";
+
+export const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut", delay: i * 0.15 },
+  }),
+};
+
+export const fadeIn: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+export const slideLeft: Variants = {
+  hidden: { x: -80, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 1, ease: "easeOut" },
+  },
+};
+
+export const slideRight: Variants = {
+  hidden: { x: 80, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 1, ease: "easeOut" },
+  },
+};
+
+export const scaleIn: Variants = {
+  hidden: { opacity: 0, scale: 0.92 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+};
+
+export const staggerContainer: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
       <Header image="/images/logo_studio.png" />
       <main>
+        {/* ─── HERO ─── */}
         <section className="bg-[#fdecda]">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
+            variants={staggerContainer}
             className="flex flex-col-reverse pt-5 lg:flex-row-reverse xl:justify-center"
           >
-            <Image
-              className="w-[400px] sm:w-[500px] md:w-[600px] xl:w-[700px]"
-              src="/images/meninas-studio.png"
-              alt="Imagem meninas"
-              width={400}
-              height={400}
-            />
+            <motion.div variants={scaleIn}>
+              <Image
+                className="w-[400px] sm:w-[500px] md:w-[600px] xl:w-[700px]"
+                src="/images/meninas-studio.png"
+                alt="Imagem meninas"
+                width={400}
+                height={400}
+              />
+            </motion.div>
 
             <div className="p-4 max-w-ful lg:flex lg:flex-col lg:justify-center text-black">
-              <p className="lg:max-w-[500px]">
+              <motion.p
+                variants={fadeUp}
+                custom={0}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="lg:max-w-[500px]"
+              >
                 <span className="text-5xl sm:text-7xl md:text-8xl lg:text8xl xl:text-9xl font-playfair font-bold">
                   Essência real,{" "}
                 </span>
                 <span className="text-4xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-8xl font-poppins italic">
                   efeito duradouro.
                 </span>
-              </p>
+              </motion.p>
 
-              <p className="text-sm max-w-[500px] my-5 sm:text-base md:text-md lg:max-w-[350px] lg:my-10 lg:max-w-[400px] xl:text-lg font-inter">
+              <motion.p
+                variants={fadeUp}
+                custom={1}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="text-sm max-w-[500px] my-5 sm:text-base md:text-md lg:max-w-[350px] lg:my-10 lg:max-w-[400px] xl:text-lg font-inter"
+              >
                 Questionamos padrões e valorizamos o que é real, entregando
                 resultados que vão além do esperado.
-              </p>
+              </motion.p>
 
-              <button
-                onClick={() =>
-                  document
-                    .getElementById("nos")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] md:h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group"
+              <motion.div
+                variants={fadeUp}
+                custom={2}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
               >
-                <span className="absolute inset-0 bg-[#4c2a12]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
-                <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
-                <span className="text-sm relative text-sm z-10 transition-all duration-300 group-hover:tracking-widest">
-                  Saiba mais
-                </span>
-              </button>
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("nos")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] md:w-[250px] md:h-[50px] lg:w-[250px] lg:h-[50px] leading-[50px] text-black transition-all duration-300 group"
+                >
+                  <span className="absolute inset-0 bg-[#4c2a12]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
+                  <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
+                  <span className="text-sm relative text-sm z-10 transition-all duration-300 group-hover:tracking-widest">
+                    Saiba mais
+                  </span>
+                </button>
+              </motion.div>
             </div>
           </motion.div>
         </section>
 
+        {/* ─── SERVIÇOS ─── */}
         <section className="mb-10" id="nos">
           <motion.p
             className="text-sm my-10 ml-[5%] uppercase text-gray-500"
-            initial={{ x: -80, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+            variants={slideLeft}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
           >
             Conheça melhor nossos serviços
           </motion.p>
           <motion.hr
             className="w-[90%] mx-auto border-t-1 border-gray-500 mb-10"
-            initial={{ x: 80, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            variants={slideRight}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
           />
-          <div className="flex-col mx-[5%] sm:flex-col sm:items-start sm:mx-10 md:items-center lg:justify-around lg:items-center xl:justify-around xl:items-center flex">
-            <h1 className="text-2xl sm:text-4xl md:text-5xl xl:text-6xl text-black mb-10">
+
+          <motion.div
+            className="flex-col mx-[5%] sm:flex-col sm:items-start sm:mx-10 md:items-center lg:justify-around lg:items-center xl:justify-around xl:items-center flex"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.h1
+              variants={fadeUp}
+              custom={0}
+              className="text-2xl sm:text-4xl md:text-5xl xl:text-6xl text-black mb-10"
+            >
               <span>Conheça o </span>
               <span className="text-[#c9964d]">Studio Cirqueira&apos;s</span>
-            </h1>
-            <p className="text-sm max-w-[500px] mb-15 sm:text-sm md:text-md md:max-w-[650px] lg:text-lg lg:max-w-[800px] lg:text-center xl:text-lg xl:max-w-[800px]">
+            </motion.h1>
+            <motion.p
+              variants={fadeUp}
+              custom={1}
+              className="text-sm max-w-[500px] mb-15 sm:text-sm md:text-md md:max-w-[650px] lg:text-lg lg:max-w-[800px] lg:text-center xl:text-lg xl:max-w-[800px]"
+            >
               No nosso studio, o foco está em cuidados bem executados, com
               atenção aos detalhes e respeito à sua individualidade, para
               realçar o que há de melhor em você.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
-          <div className="flex items-stretch justify-center rounded-3xl">
+          <motion.div
+            className="flex items-stretch justify-center rounded-3xl"
+            variants={scaleIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <div className="flex-col-reverse sm:flex-col-reverse sm:text-md md:flex-row lg:flex-row xl:flex-row flex mx-5 overflow-hidden rounded-3xl">
-              <div className="relative w-full h-[300px] md:w-full md:h-full lg:w-[400px] lg:h-[500px] xl:w-[500px] xl:h-[500px]">
+              <motion.div
+                className="relative w-full h-[300px] md:w-full md:h-full lg:w-[400px] lg:h-[500px] xl:w-[500px] xl:h-[500px]"
+                variants={slideLeft}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
                 <Image
                   src="/images/std-cirqueiras.png"
                   alt="Imagem meninas"
                   fill
                   className="sm:object-cover md:object-fill"
                 />
-              </div>
+              </motion.div>
 
-              <div className="bg-[#c9964d] flex flex-col justify-center items-start p-6">
+              <motion.div
+                className="bg-[#c9964d] flex flex-col justify-center items-start p-6"
+                variants={slideRight}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
                 <p className="text-sm font-bold font-poppins sm:text-2xl sm:mt-30 md:text-2xl lg:max-w-[500px] text-3xl max-w-xl mx-auto my-6">
                   Valorizar o que é natural é uma escolha que reflete
                   equilíbrio, autenticidade e bem-estar.
@@ -108,7 +218,7 @@ export default function Home() {
                 <p className="text-sm mb-6">
                   Conheça nosso local de atendimento.
                 </p>
-                <a
+                <motion.a
                   href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
                   target="_blank"
                   className="sm:my-5 relative flex justify-center items-center overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] leading-[50px] text-black text-sm transition-all duration-300 group"
@@ -118,155 +228,226 @@ export default function Home() {
                   <span className="relative z-10 transition-all duration-300 group-hover:tracking-widest">
                     Atendimento
                   </span>
-                </a>
-              </div>
+                </motion.a>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </section>
 
+        {/* ─── HISTÓRIA ─── */}
         <section>
           <motion.p
             className="text-sm my-10 ml-auto mr-[5%] uppercase text-gray-500 w-fit"
-            initial={{ x: 80, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            variants={slideRight}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
           >
             Conheça nossa história
           </motion.p>
           <motion.hr
             className="w-[90%] mx-auto border-t border-gray-500 mb-15"
-            initial={{ x: -80, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+            variants={slideLeft}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
           />
+
           <div className="flex justify-center items-center bg-[url('/images/background-1.png')] bg-cover bg-center h-full px-10">
             <div className="flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row flex">
-              <div className="mr-[10%]">
-                <Image
-                  className="sm:my-15 my-5"
-                  src="/images/insta.png"
-                  alt="Imagem procedimentos"
-                  width={210}
-                  height={200}
-                />
-                <div className="">
-                  <p className="text-2xl sm:text-4xl md:text-5xl md:min-w-[380px] lg:text-6xl lg:w-[500px] xl:w-[600px] xl:max-w-xl xl:text-7xl">
-                    <span className="font-poppins mt-5 text-[#bc743a]">
-                      Onde{" "}
-                    </span>
-                    <span className="font-poppins mt-5 text-[#4c2a12]">
-                      nasce o
-                    </span>
-                  </p>
-                  <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl lg:w-full xl:text-6xl font-poppins">
-                    Studio Cirqueira&apos;s
-                  </h2>
-                  <p className="mt-5 text-sm sm:mt-10 md:text-md md:max-w-[400px] lg:text-lg lg:max-w-[400px] lg:mt-15 xl:text-lg xl:mt-25 lg:leading-loose">
-                    O studio nasceu da vontade de impactar pessoas de forma
-                    real, defendendo a liberdade de ser quem se é e valorizando
-                    a beleza sem imposições.
-                  </p>
-                  <a
-                    href="/about"
-                    className="my-10 sm:my-10 md:mb-10 md:mt-20 relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] leading-[50px] text-black text-sm transition-all duration-300 group inline-block text-center"
-                  >
-                    <span className="absolute inset-0 bg-[#4c2a12]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
-                    <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
-                    <span className="relative z-10 transition-all duration-300 group-hover:tracking-widest">
-                      Saiba Mais
-                    </span>
-                  </a>
-                </div>
-              </div>
+              <motion.div
+                className="mr-[10%]"
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <motion.div variants={fadeUp} custom={0}>
+                  <Image
+                    className="sm:my-15 my-5"
+                    src="/images/insta.png"
+                    alt="Imagem procedimentos"
+                    width={210}
+                    height={200}
+                  />
+                </motion.div>
 
-              <div className="md:flex md:flex-col md:items-center md:justify-center">
-                <Image
-                  className="w-full lg:w-full xl:w-[600px] rounded-lg"
-                  src="/images/meninas-2.jpeg"
-                  alt="Imagem procedimentos"
-                  width={460}
-                  height={600}
-                />
-                <div className="flex gap-3 mt-5">
+                <motion.p
+                  variants={fadeUp}
+                  custom={1}
+                  className="text-2xl sm:text-4xl md:text-5xl md:min-w-[380px] lg:text-6xl lg:w-[500px] xl:w-[600px] xl:max-w-xl xl:text-7xl"
+                >
+                  <span className="font-poppins mt-5 text-[#bc743a]">
+                    Onde{" "}
+                  </span>
+                  <span className="font-poppins mt-5 text-[#4c2a12]">
+                    nasce o
+                  </span>
+                </motion.p>
+
+                <motion.h2
+                  variants={fadeUp}
+                  custom={2}
+                  className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl lg:w-full xl:text-6xl font-poppins"
+                >
+                  Studio Cirqueira&apos;s
+                </motion.h2>
+
+                <motion.p
+                  variants={fadeUp}
+                  custom={3}
+                  className="mt-5 text-sm sm:mt-10 md:text-md md:max-w-[400px] lg:text-lg lg:max-w-[400px] lg:mt-15 xl:text-lg xl:mt-25 lg:leading-loose"
+                >
+                  O studio nasceu da vontade de impactar pessoas de forma real,
+                  defendendo a liberdade de ser quem se é e valorizando a beleza
+                  sem imposições.
+                </motion.p>
+
+                <motion.a
+                  variants={fadeUp}
+                  custom={4}
+                  href="/about"
+                  className="my-10 sm:my-10 md:mb-10 md:mt-20 relative overflow-hidden uppercase cursor-pointer w-[150px] h-[50px] leading-[50px] text-black text-sm transition-all duration-300 group inline-block text-center"
+                >
+                  <span className="absolute inset-0 bg-[#4c2a12]/10 transition-all duration-300 group-hover:opacity-0 group-hover:scale-x-[0.1] z-0"></span>
+                  <span className="absolute inset-0 opacity-0 border-t border-b border-[#4c2a12]/50 transition-all duration-300 scale-x-[0.1] group-hover:opacity-100 group-hover:scale-x-100 z-0"></span>
+                  <span className="relative z-10 transition-all duration-300 group-hover:tracking-widest">
+                    Saiba Mais
+                  </span>
+                </motion.a>
+              </motion.div>
+
+              <motion.div
+                className="md:flex md:flex-col md:items-center md:justify-center"
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <motion.div variants={scaleIn}>
                   <Image
-                    className="w-[49%] sm:w-full md:w-[110px] lg:w-[165px] xl:w-[235px] rounded-lg"
-                    src="/images/raquel.jpg"
+                    className="w-full lg:w-full xl:w-[600px] rounded-lg"
+                    src="/images/meninas-2.jpeg"
                     alt="Imagem procedimentos"
-                    width={200}
-                    height={300}
+                    width={460}
+                    height={600}
                   />
-                  <Image
-                    className="w-[49%] sm:w-full md:w-[110px] lg:w-[165px] xl:w-[235px] rounded-lg"
-                    src="/images/mariana.jpg"
-                    alt="Imagem procedimentos"
-                    width={200}
-                    height={300}
-                  />
-                </div>
-              </div>
+                </motion.div>
+
+                <motion.div
+                  className="flex gap-3 mt-5"
+                  variants={staggerContainer}
+                >
+                  <motion.div
+                    variants={fadeUp}
+                    custom={0}
+                    className="w-[49%] sm:w-full md:w-[110px] lg:w-[165px] xl:w-[235px]"
+                  >
+                    <Image
+                      className="w-full rounded-lg"
+                      src="/images/raquel.jpg"
+                      alt="Imagem procedimentos"
+                      width={200}
+                      height={300}
+                    />
+                  </motion.div>
+                  <motion.div
+                    variants={fadeUp}
+                    custom={1}
+                    className="w-[49%] sm:w-full md:w-[110px] lg:w-[165px] xl:w-[235px]"
+                  >
+                    <Image
+                      className="w-full rounded-lg"
+                      src="/images/mariana.jpg"
+                      alt="Imagem procedimentos"
+                      width={200}
+                      height={300}
+                    />
+                  </motion.div>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </section>
 
+        {/* ─── PROCEDIMENTOS ─── */}
         <section>
           <motion.p
             className="my-10 text-sm ml-[5%] uppercase text-gray-500"
-            initial={{ x: -80, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+            variants={slideLeft}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
           >
             Conheça nossos procedimentos
           </motion.p>
           <motion.hr
             className="w-[90%] mx-auto border-t-1 border-gray-500 mb-10"
-            initial={{ x: 80, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            variants={slideRight}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
           />
+
           <div>
-            <h3 className="mb-10 ml-[5%] relative inline-block px-6 py-3 text-2xl font-semibold text-black bg-gradient-to-r from-[#f6efe9] via-[#efe2d6] to-[#f6efe9] animate-[pulse_3s_ease-in-out_infinite] after:content-[''] after:absolute after:left-1/2 after:-bottom-1 after:h-[3px] after:w-2/3 after:-translate-x-1/2 after:bg-[#4c2a12] after:animate-[bounce_3s_ease-in-out_infinite]">
+            <motion.h3
+              className="mb-10 ml-[5%] relative inline-block px-6 py-3 text-2xl font-semibold text-black bg-gradient-to-r from-[#f6efe9] via-[#efe2d6] to-[#f6efe9] animate-[pulse_3s_ease-in-out_infinite] after:content-[''] after:absolute after:left-1/2 after:-bottom-1 after:h-[3px] after:w-2/3 after:-translate-x-1/2 after:bg-[#4c2a12] after:animate-[bounce_3s_ease-in-out_infinite]"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               Métodos
-            </h3>
-            <div>
+            </motion.h3>
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               <Slider />
-            </div>
+            </motion.div>
           </div>
         </section>
 
+        {/* ─── BLOG ─── */}
         <section>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 4, ease: "easeOut" }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
+            variants={staggerContainer}
           >
             <motion.p
               className="my-10 lg:mb-15 lg:mt-40 ml-auto mr-[5%] uppercase text-gray-500 w-fit"
-              initial={{ x: 80, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              viewport={{ once: true }}
+              variants={slideRight}
             >
               Blog
             </motion.p>
             <motion.hr
               className="w-[90%] mx-auto border-t-1 border-gray-500 mb-10 lg:mb-15"
-              initial={{ x: -80, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
-              viewport={{ once: true }}
+              variants={slideLeft}
             />
-            <h4 className="mb-10 lg:mb-15 text-3xl ml-[5%] sm:text-4xl md:text-5xl lg:text-6xl flex lg:justify-center lg:align-center lg:mb-25">
+            <motion.h4
+              className="mb-10 lg:mb-15 text-3xl ml-[5%] sm:text-4xl md:text-5xl lg:text-6xl flex lg:justify-center lg:align-center lg:mb-25"
+              variants={fadeUp}
+              custom={0}
+            >
               <span className="sm:mr-3 mr-3">Conteúdos</span>
               <span className="text-[#c9964d]">para você</span>
-            </h4>
+            </motion.h4>
 
-            <div className="flex-col flex justify-center items-center gap-10 mx-5 mb-30 lg:flex-row ">
-              <div className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
+            <motion.div
+              className="flex-col flex justify-center items-center gap-10 mx-5 mb-30 lg:flex-row"
+              variants={staggerContainer}
+            >
+              {/* Card 1 */}
+              <motion.div
+                className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]"
+                variants={fadeUp}
+                custom={0}
+                whileHover={{ y: -6, transition: { duration: 0.3 } }}
+              >
                 <div className="relative w-full h-[150px] md:h-[200px] lg:h-[130px] xl:h-[230px]">
                   <Image
                     src="/images/sobrancelha.png"
@@ -302,10 +483,16 @@ export default function Home() {
                     </span>
                   </button>
                 </Link>
-              </div>
+              </motion.div>
 
-              <div className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
-                <div className=" md:h-[200px] lg:h-[130px] xl:h-[230px] relative w-full h-[150px]">
+              {/* Card 2 */}
+              <motion.div
+                className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]"
+                variants={fadeUp}
+                custom={1}
+                whileHover={{ y: -6, transition: { duration: 0.3 } }}
+              >
+                <div className="md:h-[200px] lg:h-[130px] xl:h-[230px] relative w-full h-[150px]">
                   <Image
                     src="/images/micro.png"
                     alt="Design com Henna"
@@ -340,9 +527,15 @@ export default function Home() {
                     </span>
                   </button>
                 </Link>
-              </div>
+              </motion.div>
 
-              <div className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]">
+              {/* Card 3 */}
+              <motion.div
+                className="h-[300px] md:h-[400px] lg:h-[300px] xl:h-[400px] inline-block w-full rounded-2xl overflow-hidden bg-[#fdecda]"
+                variants={fadeUp}
+                custom={2}
+                whileHover={{ y: -6, transition: { duration: 0.3 } }}
+              >
                 <div className="relative w-full h-[150px] md:h-[200px] lg:h-[130px] xl:h-[230px]">
                   <Image
                     src="/images/nail.png"
@@ -378,10 +571,11 @@ export default function Home() {
                     </span>
                   </button>
                 </Link>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </section>
+
         <Footer />
       </main>
     </div>

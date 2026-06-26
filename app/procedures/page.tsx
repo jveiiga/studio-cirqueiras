@@ -14,6 +14,32 @@ type ProcedureItemProps = {
   href: string;
 };
 
+// Variantes de animação reutilizáveis
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.18, delayChildren: 0.1 },
+  },
+};
+
+const staggerItem = {
+  hidden: { opacity: 0, y: 25 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" as const },
+  },
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.92 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.9, ease: "easeOut" as const },
+  },
+};
+
 const Divider = () => (
   <motion.hr
     className="w-[90%] my-10 border-gray-800 mx-auto border-t-1 lg:mb-10 xl:my-20"
@@ -34,7 +60,12 @@ const ProcedureItem = ({
   href,
 }: ProcedureItemProps) => (
   <div className="px-5 md:flex md:flex-col-reverse lg:max-w-[600px] xl:max-w-full xl:flex xl:flex-row-reverse xl:justify-between xl:mb-40 2xl:justify-evenly">
-    <div>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={scaleIn}
+    >
       <Image
         src={image}
         alt="Procedures Banner"
@@ -42,15 +73,29 @@ const ProcedureItem = ({
         height={600}
         className={`w-full h-[250px] object-cover rounded-2xl sm:h-[350px] xl:w-[600px] ${imageClass}`}
       />
-    </div>
+    </motion.div>
 
-    <div className="flex flex-col justify-start">
-      <p className="text-3xl mt-5 xl:text-5xl">{title}</p>
-      <p className="my-5 text-sm md:max-w-[400px] lg:max-w-[450px] xl:text-lg">
+    <motion.div
+      className="flex flex-col justify-start"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={staggerContainer}
+    >
+      <motion.p variants={staggerItem} className="text-3xl mt-5 xl:text-5xl">
+        {title}
+      </motion.p>
+      <motion.p
+        variants={staggerItem}
+        className="my-5 text-sm md:max-w-[400px] lg:max-w-[450px] xl:text-lg"
+      >
         {description}
-      </p>
+      </motion.p>
 
-      <a
+      <motion.a
+        variants={staggerItem}
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.97 }}
         href={href}
         target="_blank"
         rel="noreferrer"
@@ -75,14 +120,14 @@ const ProcedureItem = ({
             className="transition-all duration-300 group-hover:invert group-hover:translate-x-1"
           />
         </span>
-      </a>
-    </div>
+      </motion.a>
+    </motion.div>
   </div>
 );
 
 export default function Procedures() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header image="/images/logo_studio.png" />
       <section className="bg-[#fdecda] bg-[url('/images/bg-procedures.png')] bg-no-repeat">
         <motion.div
@@ -97,7 +142,12 @@ export default function Procedures() {
     "
         >
           {/* Container da imagem */}
-          <div className="relative z-0 w-full h-full sm:w-1/2 sm:h-auto">
+          <motion.div
+            className="relative z-0 w-full h-full sm:w-1/2 sm:h-auto"
+            initial={{ opacity: 0, scale: 1.08 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.3, ease: "easeOut" }}
+          >
             <Image
               src="/images/meninas-procedures.png"
               alt="Procedimentos"
@@ -106,7 +156,7 @@ export default function Procedures() {
               className="object-cover object-center"
               priority
             />
-          </div>
+          </motion.div>
 
           {/* Overlay de gradiente — MOBILE ORIGINAL */}
           {/* <div
@@ -144,20 +194,31 @@ export default function Procedures() {
         xl:justify-center
       "
           >
-            <div className="lg:pl-[5%]">
-              <h1 className="lg:max-w-[500px]">
+            <motion.div
+              className="lg:pl-[5%]"
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
+              <motion.h1 variants={staggerItem} className="lg:max-w-[500px]">
                 <span className="font-inter text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
                   Procedimentos
                 </span>
-              </h1>
+              </motion.h1>
 
-              <p className="text-sm max-w-[400px] mt-5 md:text-lg lg:leading-8 xl:text-2xl xl:max-w-[700px] font-inter">
+              <motion.p
+                variants={staggerItem}
+                className="text-sm max-w-[400px] mt-5 md:text-lg lg:leading-8 xl:text-2xl xl:max-w-[700px] font-inter"
+              >
                 Cada detalhe é planejado com precisão para proporcionar uma
                 experiência singular, alinhada às suas necessidades e
                 expectativas.
-              </p>
+              </motion.p>
 
-              <button
+              <motion.button
+                variants={staggerItem}
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
                 onClick={() =>
                   document
                     .getElementById("procedures")
@@ -170,26 +231,18 @@ export default function Procedures() {
                 <span className="relative z-10 text-sm transition-all duration-300 group-hover:tracking-widest">
                   Saiba mais
                 </span>
-              </button>
-            </div>
+              </motion.button>
 
-            <motion.p
-              className="text-sm lg:ml-[5%] uppercase text-gray-800"
-              initial={{ x: -80, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              Conheça nossos procedimentos
-            </motion.p>
-
-            <motion.hr
-              className="w-[90%] my-5 border-gray-800 lg:mx-auto"
-              initial={{ x: 80, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              viewport={{ once: true }}
-            />
+              <motion.p
+                className="text-sm my-5 lg:ml-[5%] lg:mt-10 uppercase text-gray-800"
+                initial={{ x: -80, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                Tudo sobre nossos procedimentos
+              </motion.p>
+            </motion.div>
           </div>
         </motion.div>
       </section>
@@ -210,7 +263,6 @@ export default function Procedures() {
           description="Unhas frágeis e quebradiças deixam de ser um problema com o banho de gel. O procedimento fortalece, protege e garante um acabamento elegante e duradouro."
           buttonText="Sinta essa Mudança"
           href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
-
         />
         <Divider />
 
@@ -221,7 +273,6 @@ export default function Procedures() {
           buttonText="Realce seu olhar"
           imageClass="object-[70%_20%] sm:object-[90%_20%]"
           href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
-
         />
         <Divider />
 
@@ -233,7 +284,6 @@ export default function Procedures() {
           textSize="text-[12px]"
           imageClass="sm:object-[70%_70%]"
           href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
-
         />
         <Divider />
 
@@ -244,7 +294,6 @@ export default function Procedures() {
           buttonText="Defina seu olhar"
           imageClass="object-[70%_20%] sm:object-[70%_10%]"
           href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
-
         />
         <Divider />
 
@@ -256,7 +305,6 @@ export default function Procedures() {
           textSize="text-[12px]"
           imageClass="object-[70%_20%] sm:object-[70%_36%]"
           href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
-
         />
         <Divider />
 
@@ -268,7 +316,6 @@ export default function Procedures() {
           textSize="text-[12px]"
           imageClass="object-[70%_20%] sm:object-[70%_28%]"
           href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
-
         />
         <Divider />
 
@@ -279,7 +326,6 @@ export default function Procedures() {
           buttonText="Viva essa versão"
           imageClass="object-[70%_20%] sm:object-[70%_10%]"
           href="https://wa.me/5511932382035?text=Olá,%20gostaria%20de%20agendar%20um%20horário"
-
         />
       </section>
 
